@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rick Kersmarki",
+      "email": "rick@gmail.com"
+    },
+    {
+      "name": "Dunk Williams",
+      "email": "dunk@gmail.com",
+      "id": 2
+    }
+  ],
+  "projects": [
+    {
+      "title": "Repainting",
+      "description": "",
+      "budget": "300",
+      "pro": true,
+      "id": 1
+    },
+    {
+      "title": "fix back gate",
+      "description": "latch needs to be replaced",
+      "budget": "50",
+      "pro": false,
+      "id": 2
+    },
+    {
+      "title": "bathroom sink",
+      "description": "replace faucet and handles, snake the drain",
+      "budget": "150",
+      "pro": true,
+      "id": 3
+    },
+    {
+      "title": "baseboards",
+      "description": "repaint baseboards in the hallway, replace missing baseboard in spare room",
+      "budget": "100",
+      "pro": false,
+      "id": 4
+    }
+  ],
+  "contractors": [],
+  "estimates": [],
+  "expenses": []
+}

@@ -1,10 +1,35 @@
-
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { Login } from "./components/auth/Login";
+import { Register } from "./components/auth/Register";
 import './App.css';
+import ApplicationViews from "./components/ApplicationViews";
+import { NavBar } from "./components/nav/NavBar";
 
-function App() {
+const App = () => {
   return (
     <>
-    <div>Fixer Upper</div>
+   <Route
+      render={() => {
+        if (localStorage.getItem("fixer_user")) {
+          return (
+            <>
+              <NavBar />
+              <ApplicationViews />
+            </>
+          );
+        } else {
+          return <Redirect to="/login" />;
+        }
+      }}
+    />
+
+    <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/register">
+      <Register />
+    </Route>
     </>
   );
 }
