@@ -13,35 +13,87 @@
   ],
   "projects": [
     {
-      "title": "Repainting",
-      "description": "",
-      "budget": "300",
-      "pro": true,
+      "title": "Interior painting",
+      "description": "Hallway, living room, spare room need to be painted. Need paint, primer, rollers and paint trays.",
+      "budget": 300,
+      "pro": false,
       "id": 1
     },
     {
-      "title": "fix back gate",
-      "description": "latch needs to be replaced",
-      "budget": "50",
-      "pro": false,
+      "title": "Repave carport",
+      "description": "When getting estimates see if filling cracks is possible.",
+      "budget": 20,
+      "pro": true,
       "id": 2
     },
     {
-      "title": "bathroom sink",
-      "description": "replace faucet and handles, snake the drain",
-      "budget": "150",
-      "pro": true,
+      "title": "Kitchen Sink",
+      "description": "Replacing faucet and knobs only.",
+      "budget": 200,
+      "pro": false,
       "id": 3
     },
     {
-      "title": "baseboards",
-      "description": "repaint baseboards in the hallway, replace missing baseboard in spare room",
-      "budget": "100",
+      "title": "Carpet",
+      "description": "Rip up carpet through out the house. May need to rent truck for carpet disposal. May also need a few small tools.",
+      "budget": 200,
       "pro": false,
       "id": 4
     }
   ],
-  "contractors": [],
+  "contractors": [
+    {
+      "id": 1,
+      "name": "Smith Bros. Painting",
+      "phone": "615-615-6156",
+      "email": "paint@smithbros.com",
+      "website": "smithbros.com"
+    },
+    {
+      "name": "Big Boys Construction",
+      "phone": "615-987-1234",
+      "email": "bigboys@bigboys.com",
+      "website": "bigboys.com",
+      "id": 2
+    }
+  ],
   "estimates": [],
-  "expenses": []
+  "expenses": [
+    {
+      "id": 1,
+      "type": "paint",
+      "amount": 70,
+      "projectId": 1
+    },
+    {
+      "type": "shsfhsfhsfh",
+      "amount": "22",
+      "projectId": 1,
+      "id": 2
+    },
+    {
+      "type": "fhdfhjdfhjdfj",
+      "amount": "66",
+      "projectId": 3,
+      "id": 3
+    },
+    {
+      "type": "djsfgjfgj",
+      "amount": "44",
+      "projectId": 3,
+      "id": 4
+    },
+    {
+      "type": "gwrgwrg",
+      "amount": "33",
+      "projectId": 4,
+      "id": 5
+    },
+    {
+      "type": "dfhdfhdfh",
+      "amount": "44",
+      "projectId": 4,
+      "id": 6
+    }
+  ]
 }

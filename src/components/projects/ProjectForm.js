@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-
 export const ProjectForm = () => {
     const [project, setProject] = useState({
         title: '',
@@ -11,6 +10,7 @@ export const ProjectForm = () => {
     })
 
     const history = useHistory()
+    
 
     const saveProject = (e) => {
         e.preventDefault()
@@ -29,10 +29,10 @@ export const ProjectForm = () => {
             body: JSON.stringify(newProject)
         }
 
-        return fetch("http://localhost:8088/projects", fetchOptions)
+        return fetch(`http://localhost:8088/projects`, fetchOptions)
             .then(response => response.json())
             .then(() => {
-                project.pro === false ? history.push("/diyProject") : history.push("/proProject")
+                project.pro === false ? history.push(`/diyProject`) : history.push("/proProject")
             })
     }
 
@@ -41,7 +41,7 @@ export const ProjectForm = () => {
             <h2 className="projectForm_title">Lets get started!</h2>
             <fieldset>
                 <div className="form-group">
-                    <label>Title:</label>
+                    <label>Title</label>
                     <input
                         onChange={
                             (e) => {
@@ -58,7 +58,7 @@ export const ProjectForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Description:</label>
+                    <label>Description</label>
                     <input
                         onChange={
                             (e) => {
@@ -75,12 +75,12 @@ export const ProjectForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Budget:</label>
+                    <label>Budget</label>
                     <input
                         onChange={
                             (e) => {
                                 const copy = { ...project }
-                                copy.budget = e.target.value
+                                copy.budget = parseInt(e.target.value)
                                 setProject(copy)
                             }}
                         required autoFocus
@@ -92,8 +92,8 @@ export const ProjectForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label >Hire a pro:</label>
-                    <input type="checkbox" 
+                    <label >Hire a pro&nbsp;</label>
+                    <input type="checkbox"
                         onChange={(e) => {
                             const copy = { ...project }
                             copy.pro = e.target.checked
@@ -103,8 +103,8 @@ export const ProjectForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label >Do it yourself:</label>
-                    <input type="checkbox" 
+                    <label >Do it yourself&nbsp;</label>
+                    <input type="checkbox"
                         onChange={(e) => {
                             const copy = { ...project }
                             const isChecked = e.target.checked
@@ -118,6 +118,7 @@ export const ProjectForm = () => {
             </button>
         </form>
     )
-    
+
 }
 
+export default ProjectForm

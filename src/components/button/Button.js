@@ -4,7 +4,7 @@ import React from 'react'
 const Button = (props) => {
   
     return (
-    <div></div>
+    <button className='btn'>Add</button>
   )
 }
 

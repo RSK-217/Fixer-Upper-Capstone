@@ -9,27 +9,27 @@ import { NavBar } from "./components/nav/NavBar";
 const App = () => {
   return (
     <>
-   <Route
-      render={() => {
-        if (localStorage.getItem("fixer_user")) {
-          return (
-            <>
-              <NavBar />
-              <ApplicationViews />
-            </>
-          );
-        } else {
-          return <Redirect to="/login" />;
-        }
-      }}
-    />
+      <Route
+        render={() => {
+          if (localStorage.getItem("fixer_user")) {
+            return (
+              <>
+                <NavBar />
+                <ApplicationViews />
+              </>
+            );
+          } else {
+            return <Redirect to="/login" />;
+          }
+        }}
+      />
 
-    <Route path="/login">
-      <Login />
-    </Route>
-    <Route path="/register">
-      <Register />
-    </Route>
+      <Route path="/login">
+        <Login />
+      </Route>
+      <Route path="/register">
+        <Register />
+      </Route>
     </>
   );
 }
