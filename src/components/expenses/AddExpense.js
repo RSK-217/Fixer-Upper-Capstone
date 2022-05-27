@@ -20,7 +20,7 @@ export const AddExpense = () => {
         const newExpense = {
             type: expense.type,
             amount: expense.amount,
-            projectId: expense.projectId
+            projectId: parseInt(`${projectId}`)
         }
 
         const fetchOptions = {
@@ -64,7 +64,7 @@ export const AddExpense = () => {
                         onChange={
                             (e) => {
                                 const copy = { ...expense }
-                                copy.amount = e.target.value
+                                copy.amount = parseInt(e.target.value)
                                 setExpense(copy)
                             }}
                         required autoFocus

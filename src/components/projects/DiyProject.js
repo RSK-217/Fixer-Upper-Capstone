@@ -22,6 +22,7 @@ const DiyProject = () => {
             <h2>{diy.title}</h2>
             <p>{diy.description}</p>
             <Expenses />
+            
 
         </>
     )

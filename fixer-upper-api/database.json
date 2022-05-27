@@ -43,13 +43,6 @@
   ],
   "contractors": [
     {
-      "id": 1,
-      "name": "Smith Bros. Painting",
-      "phone": "615-615-6156",
-      "email": "paint@smithbros.com",
-      "website": "smithbros.com"
-    },
-    {
       "name": "Big Boys Construction",
       "phone": "615-987-1234",
       "email": "bigboys@bigboys.com",
@@ -60,40 +53,10 @@
   "estimates": [],
   "expenses": [
     {
-      "id": 1,
-      "type": "paint",
-      "amount": 70,
-      "projectId": 1
-    },
-    {
-      "type": "shsfhsfhsfh",
-      "amount": "22",
+      "type": "Paint",
+      "amount": 75,
       "projectId": 1,
-      "id": 2
-    },
-    {
-      "type": "fhdfhjdfhjdfj",
-      "amount": "66",
-      "projectId": 3,
-      "id": 3
-    },
-    {
-      "type": "djsfgjfgj",
-      "amount": "44",
-      "projectId": 3,
-      "id": 4
-    },
-    {
-      "type": "gwrgwrg",
-      "amount": "33",
-      "projectId": 4,
-      "id": 5
-    },
-    {
-      "type": "dfhdfhdfh",
-      "amount": "44",
-      "projectId": 4,
-      "id": 6
+      "id": 1
     }
   ]
 }
