@@ -39,6 +39,20 @@
       "budget": 200,
       "pro": false,
       "id": 4
+    },
+    {
+      "title": "House painting",
+      "description": "Paint brick exterior",
+      "budget": 7000,
+      "pro": true,
+      "id": 5
+    },
+    {
+      "title": "fix the fence",
+      "description": "new gate hinges and latch. replace broken slats",
+      "budget": 230,
+      "pro": false,
+      "id": 6
     }
   ],
   "contractors": [
@@ -50,13 +64,57 @@
       "id": 2
     }
   ],
-  "estimates": [],
+  "estimates": [
+    {
+      "estimate": 10000,
+      "projectId": 2,
+      "contractor": "Ham and Sons",
+      "contact": "615-990-4822",
+      "id": 1
+    }
+  ],
   "expenses": [
     {
       "type": "Paint",
       "amount": 75,
       "projectId": 1,
       "id": 1
+    },
+    {
+      "type": "paint rollers and trays",
+      "amount": 40,
+      "projectId": 1,
+      "id": 2
+    },
+    {
+      "type": "dfgdfhdfhdf",
+      "amount": 333,
+      "projectId": 3,
+      "id": 3
+    },
+    {
+      "type": "nmbnmbnmb",
+      "amount": 66,
+      "projectId": 3,
+      "id": 4
+    },
+    {
+      "type": "ipipyuio",
+      "amount": 55,
+      "projectId": 4,
+      "id": 5
+    },
+    {
+      "type": "qweqwqwer",
+      "amount": 1111,
+      "projectId": 4,
+      "id": 6
+    },
+    {
+      "type": "drain",
+      "amount": 666,
+      "projectId": 3,
+      "id": 7
     }
   ]
 }
