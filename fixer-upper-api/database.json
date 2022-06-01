@@ -15,14 +15,15 @@
     {
       "title": "Interior painting",
       "description": "Hallway, living room, spare room need to be painted. Need paint, primer, rollers and paint trays.",
-      "budget": 300,
+      "budget": 500,
       "pro": false,
+      "complete": true,
       "id": 1
     },
     {
       "title": "Repave carport",
       "description": "When getting estimates see if filling cracks is possible.",
-      "budget": 20,
+      "budget": 20000,
       "pro": true,
       "id": 2
     },

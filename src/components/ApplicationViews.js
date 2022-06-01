@@ -6,9 +6,10 @@ import AddExpense from './expenses/AddExpense';
 import EditExpense from './expenses/EditExpense';
 import AddEstimate from './estimates/AddEstimate';
 import EditEstimate from './estimates/EditEstimate';
-import DiyProject from './projects/DiyProject';
-import MyProjects from './projects/MyProjects';
 import ProjectForm from './projects/ProjectForm';
+import MyProjects from './projects/MyProjects';
+import EditProject from './projects/EditProject';
+import DiyProject from './projects/DiyProject';
 import ProProject from './projects/ProProject';
 
 export const ApplicationViews = () => {
@@ -19,10 +20,12 @@ export const ApplicationViews = () => {
       <Route exact path="/diyProject/:projectId(\d+)"><DiyProject /></Route>
       <Route path="/diyProject/:projectId(\d+)/add"><AddExpense /></Route>
       <Route path="/diyProject/:expenseId(\d+)/edit"><EditExpense /></Route>
+      <Route path="/diyProject/:projectId(\d+)/editProject"><EditProject /></Route>
       
       <Route exact path="/proProject/:projectId(\d+)"><ProProject /></Route>
       <Route path="/proProject/:projectId(\d+)/add"><AddEstimate /></Route>
       <Route path="/proProject/:estimateId(\d+)/edit"><EditEstimate /></Route>
+      <Route path="/proProject/:projectId(\d+)/editProject"><EditProject /></Route>
       
       <Route path="/projects"><MyProjects /></Route>
       

@@ -1,42 +1,47 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
+import { getIdProject } from '../ApiManager'
 
-export const ProjectForm = () => {
-    const [project, setProject] = useState({
-        title: '',
-        description: '',
-        budget: 1,
-        pro: false
-    })
-
+export const EditProject = () => {
+    const [project, setProject] = useState([])
     const history = useHistory()
+    const { projectId } = useParams()
 
+    const cancelForm = () => {
+        history.push(project.pro === false ? history.push(`/diyProject/${project.id}`) : history.push(`/proProject/${project.id}`))
+    }
 
-    const saveProject = (event) => {
+    useEffect(
+        () => {
+            getIdProject(projectId)
+                .then((res) => {
+                    setProject(res)
+                })
+        },
+        []
+    )
+
+    const updateProject = (event) => {
         event.preventDefault()
         const newProject = {
             title: project.title,
             description: project.description,
-            budget: project.budget,
-            pro: project.pro
+            budget: parseInt(project.budget),
+            pro: project.pro === false ? false : true,
+            complete: project.complete
         }
 
-        const fetchOptions = {
-            method: "POST",
+        fetch(`http://localhost:8088/projects/${projectId}`, {
+            method: 'PUT',
             headers: {
-                "Content-Type": "application/json"
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(newProject)
-        }
-
-        return fetch(`http://localhost:8088/projects`, fetchOptions)
-            .then(response => response.json())
-            .then((projectres) => {
-                projectres.pro === false ? history.push(`/diyProject/${projectres.id}`) : history.push(`/proProject/${projectres.id}`)
+        })
+            .then(() => {
+                history.push(project.pro === false ? history.push(`/diyProject/${project.id}`) : history.push(`/proProject/${project.id}`))
             })
     }
-
-
 
     return (
         <form className="projectForm">
@@ -54,7 +59,7 @@ export const ProjectForm = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="title"
+                        value={project.title}
                     />
                 </div>
             </fieldset>
@@ -69,9 +74,9 @@ export const ProjectForm = () => {
                                 setProject(copy)
                             }}
                         required autoFocus
-                        type="text"
+                        type="textarea"
                         className="form-control"
-                        placeholder="description"
+                        value={project.description}
                     />
                 </div>
             </fieldset>
@@ -82,45 +87,37 @@ export const ProjectForm = () => {
                         onChange={
                             (e) => {
                                 const copy = { ...project }
-                                copy.budget = parseInt(e.target.value)
+                                copy.budget = e.target.value
                                 setProject(copy)
                             }}
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="$"
+                        value={project.budget}
                     />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label >Hire a pro&nbsp;</label>
+                    <label >Project has been completed&nbsp;</label>
                     <input type="checkbox"
                         onChange={(e) => {
                             const copy = { ...project }
-                            copy.pro = e.target.checked
+                            copy.complete = e.target.checked
                             setProject(copy)
-                        }} />
+                        }} 
+                        />
                 </div>
             </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <label >Do it yourself&nbsp;</label>
-                    <input type="checkbox"
-                        onChange={(e) => {
-                            const copy = { ...project }
-                            const isChecked = e.target.checked
-                            copy.pro = !isChecked
-                            setProject(copy)
-                        }} />
-                </div>
-            </fieldset>
-            <button className="btn btn-primary" onClick={saveProject}>
-                Let's go!
+            <button className="btn btn-primary" onClick={updateProject}>
+                Save
+            </button>&nbsp;
+            <button className="btn btn-primary" onClick={cancelForm}>
+                Cancel
             </button>
         </form>
     )
 
 }
 
-export default ProjectForm
+export default EditProject
