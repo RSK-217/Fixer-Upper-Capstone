@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 
 export const ProjectForm = () => {
     const [project, setProject] = useState({
@@ -10,7 +10,7 @@ export const ProjectForm = () => {
     })
 
     const history = useHistory()
-    
+
 
     const saveProject = (e) => {
         e.preventDefault()
@@ -31,10 +31,12 @@ export const ProjectForm = () => {
 
         return fetch(`http://localhost:8088/projects`, fetchOptions)
             .then(response => response.json())
-            .then(() => {
-                project.pro === false ? history.push(`/diyProject`) : history.push("/proProject")
+            .then((projectres) => {
+                projectres.pro === false ? history.push(`/diyProject/${projectres.id}`) : history.push(`/proProject/${projectres.id}`)
             })
     }
+
+
 
     return (
         <form className="projectForm">

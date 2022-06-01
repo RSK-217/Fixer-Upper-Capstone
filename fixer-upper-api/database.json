@@ -53,6 +53,13 @@
       "budget": 230,
       "pro": false,
       "id": 6
+    },
+    {
+      "title": "Refinish floors",
+      "description": "Pull up carpet, clean and refinish",
+      "budget": 1000,
+      "pro": false,
+      "id": 7
     }
   ],
   "contractors": [
@@ -66,7 +73,7 @@
   ],
   "estimates": [
     {
-      "estimate": 10000,
+      "estimate": 12000,
       "projectId": 2,
       "contractor": "Ham and Sons",
       "contact": "615-990-4822",
@@ -75,14 +82,14 @@
   ],
   "expenses": [
     {
-      "type": "Paint",
-      "amount": 75,
+      "type": "paint",
+      "amount": 90,
       "projectId": 1,
       "id": 1
     },
     {
-      "type": "paint rollers and trays",
-      "amount": 40,
+      "type": "Paint rollers and trayzssaas",
+      "amount": 133,
       "projectId": 1,
       "id": 2
     },

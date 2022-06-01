@@ -42,9 +42,9 @@ export const MyContractors = () => {
                     <CardBody>
                         <CardImg></CardImg>
                         <CardTitle><h3>{contractor.name}</h3></CardTitle>
-                        <CardText>{contractor.phone}</CardText>
-                        <CardText>{contractor.email}</CardText>
-                        <CardText>{contractor.website}</CardText>
+                        <CardText>phone: {contractor.phone}</CardText>
+                        <CardText>email: {contractor.email}</CardText>
+                        <CardText>website: {contractor.website}</CardText>
                         Delete contractor  <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
                             Delete(contractor.id)
                         }}></BsFillXCircleFill> 
