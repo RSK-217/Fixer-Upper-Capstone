@@ -4,16 +4,33 @@ import { getAllProjects } from '../ApiManager'
 import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
 import { BsFillXCircleFill } from 'react-icons/bs'
 import { BsFillPlusCircleFill } from 'react-icons/bs'
+import Filter from '../filter/Filter';
 
 export const MyProjects = () => {
     const [projects, setProjects] = useState([])
-
+    const [filterSetting, setFilter] = useState('')
 
     const Delete = (id) => {
         fetch(`http://localhost:8088/projects/${id}`, {
             method: "DELETE"
         })
             .then(setProjects(project => project.filter(project => project.id !== id)))
+    }
+    
+    const filterProjects = () => {
+        if(filterSetting === 'pro'){
+            return projects.filter(p => p.pro === true)
+        } 
+        if(filterSetting === 'diy'){
+            return projects.filter(p => p.pro === false)   
+        }
+        if(filterSetting === 'complete'){
+            return projects.filter(p => p.complete === true)
+        }
+        if(filterSetting === 'incomplete'){
+            return projects.filter(p => p.complete === false)
+        }
+        return projects
     }
 
     useEffect(
@@ -28,9 +45,9 @@ export const MyProjects = () => {
 
     return (
         <>
-            <h1>My Projects</h1>
+            <h1>My Projects</h1> <Filter value={filterSetting} setFilter={setFilter}/>&nbsp;&nbsp;
             <Link to='/form'><BsFillPlusCircleFill></BsFillPlusCircleFill>   Start a new project</Link>
-            {projects.map((project) => {
+            {filterProjects().map((project) => {
                 return <Card key={`project--${project.id}`}>
                     <CardBody>
                         <CardImg></CardImg>

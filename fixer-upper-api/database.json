@@ -70,6 +70,13 @@
       "email": "bigboys@bigboys.com",
       "website": "bigboys.com",
       "id": 2
+    },
+    {
+      "name": "Ham and Sons",
+      "phone": "615-990-4822",
+      "email": "",
+      "website": "",
+      "id": 4
     }
   ],
   "estimates": [
@@ -77,8 +84,15 @@
       "estimate": 12000,
       "projectId": 2,
       "contractor": "Ham and Sons",
-      "contact": "615-990-4822",
+      "phone": "615-990-4822",
       "id": 1
+    },
+    {
+      "estimate": 14000,
+      "projectId": 2,
+      "contractor": "Big Concrete",
+      "phone": "615-777-3443",
+      "id": 2
     }
   ],
   "expenses": [

@@ -27,7 +27,7 @@ export const EditEstimate = () => {
             estimate: parseInt(estimate.estimate),
             projectId: estimate.projectId,
             contractor: estimate.contractor,
-            contact: estimate.contact
+            phone: estimate.phone
         }
 
         fetch(`http://localhost:8088/estimates/${estimateId}`, {
@@ -80,18 +80,18 @@ export const EditEstimate = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Contact</label>
+                    <label>Phone</label>
                     <input
                         onChange={
                             (e) => {
                                 const copy = { ...estimate }
-                                copy.contact = e.target.value
+                                copy.phone = e.target.value
                                 setEstimate(copy)
                             }}
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={estimate.contact}
+                        value={estimate.phone}
                     />
                 </div>
             </fieldset>

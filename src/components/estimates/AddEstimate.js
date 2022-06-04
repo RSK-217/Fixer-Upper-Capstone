@@ -22,7 +22,7 @@ export const AddEstimate = () => {
             estimate: estimate.estimate,
             projectId: parseInt(`${projectId}`),
             contractor: estimate.contractor,
-            contact: estimate.contact
+            phone: estimate.phone
         }
 
         const fetchOptions = {
@@ -78,18 +78,18 @@ export const AddEstimate = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Contact</label>
+                    <label>Phone</label>
                     <input
                         onChange={
                             (e) => {
                                 const copy = { ...estimate }
-                                copy.contact = e.target.value
+                                copy.phone = e.target.value
                                 setEstimate(copy)
                             }}
                         required autoFocus
                         type="text"
                         className="form-control"
-                        placeholder="contact"
+                        placeholder="phone"
                     />
                 </div>
             </fieldset>

@@ -6,7 +6,8 @@ export const ProjectForm = () => {
         title: '',
         description: '',
         budget: 1,
-        pro: false
+        pro: false,
+        complete: false
     })
 
     const history = useHistory()
@@ -14,19 +15,13 @@ export const ProjectForm = () => {
 
     const saveProject = (event) => {
         event.preventDefault()
-        const newProject = {
-            title: project.title,
-            description: project.description,
-            budget: project.budget,
-            pro: project.pro
-        }
 
         const fetchOptions = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(newProject)
+            body: JSON.stringify(project)
         }
 
         return fetch(`http://localhost:8088/projects`, fetchOptions)

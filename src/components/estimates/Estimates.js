@@ -4,6 +4,7 @@ import { getAllEstimates } from '../ApiManager'
 import { BsFillPlusCircleFill } from 'react-icons/bs'
 import { BsFillXCircleFill } from 'react-icons/bs'
 import { BsFillPencilFill } from 'react-icons/bs'
+import { AddToMyCon } from './AddToMyCon'
 import AddEstimate from '../estimates/AddEstimate'
 
 export const Estimates = () => {
@@ -52,7 +53,8 @@ export const Estimates = () => {
             {estimates.map(estimate => {
                 return <div key={`estimate--${estimate.id}`}><p>$: {estimate.estimate} -&nbsp;
                     <Link to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
-                    {estimate.contact}&nbsp;&nbsp;
+                    {estimate.phone}&nbsp;&nbsp;
+                    <AddToMyCon estimate={estimate}/>&nbsp;&nbsp;
                     <Link to={`/proProject/${estimate.id}/edit`}>
                         <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
                             showForm()
