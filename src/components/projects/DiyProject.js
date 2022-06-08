@@ -1,10 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { getAllExpenses } from '../ApiManager'
 import { Expenses } from '../expenses/Expenses'
+import { FinalCost } from '../finalCost/finalCost'
 
 const DiyProject = () => {
     const [project, setProject] = useState({})
+    const [expense, setExpense] = useState([])
     const { projectId } = useParams()
+
+    const filterExpense = (expensesToFilter) => {
+        return expensesToFilter.filter(expense => {
+            return expense.projectId === parseInt(projectId)
+        }
+        )
+    }
+
+    const projectComplete = () => {
+        return project.complete === true ? 'PROJECT COMPLETE' : ''
+    }
+
+    const cost = () => {
+        if(project.complete === true){
+            const sum = expense.reduce((total, currentValue) => total = total + currentValue.amount, 0)
+            return <FinalCost value={sum}/>
+        }
+    }
 
     useEffect(
         () => {
@@ -17,16 +38,22 @@ const DiyProject = () => {
         [projectId]
     )
 
-    const projectComplete = () => {
-        return project.complete === true ? 'PROJECT COMPLETE' : ''
-    }
+    useEffect(
+        () => {
+            getAllExpenses()
+                .then((data) => {
+                    setExpense(filterExpense(data))
+                }) 
+        },
+        []
+    )
 
     return (
         <>
             <h1>{projectComplete()}</h1>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <h4>Budget: </h4><p>${project.budget}</p>
+            <h4>Budget: </h4><p>${project.budget}</p>{cost()}
             <Link to={`/diyProject/${projectId}/editProject`}>Edit project details</Link>
             <Expenses />
 

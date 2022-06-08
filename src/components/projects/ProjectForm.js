@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 export const ProjectForm = () => {
+    const [selected, setSelected] = useState({
+        selectedOption: ''
+    })
     const [project, setProject] = useState({
         title: '',
         description: '',
@@ -12,6 +15,11 @@ export const ProjectForm = () => {
 
     const history = useHistory()
 
+    const handleChange = (changeEvent) => {
+        setSelected({
+            selectedOption: changeEvent.target.value
+        })
+    }
 
     const saveProject = (event) => {
         event.preventDefault()
@@ -90,24 +98,32 @@ export const ProjectForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label >Hire a pro&nbsp;</label>
-                    <input type="checkbox"
+                    <input type="radio"
                         onChange={(e) => {
                             const copy = { ...project }
                             copy.pro = e.target.checked
                             setProject(copy)
-                        }} />
+                            handleChange(e)
+                        }} 
+                        value='option1'
+                        checked={selected.selectedOption === 'option1'}
+                        />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
                     <label >Do it yourself&nbsp;</label>
-                    <input type="checkbox"
+                    <input type="radio"
                         onChange={(e) => {
                             const copy = { ...project }
                             const isChecked = e.target.checked
                             copy.pro = !isChecked
                             setProject(copy)
-                        }} />
+                            handleChange(e)
+                        }} 
+                        value='option2'
+                        checked={selected.selectedOption === 'option2'}
+                        />
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={saveProject}>

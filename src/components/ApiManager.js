@@ -29,12 +29,12 @@ export const expandedEstimates = (id) => {
     .then(res => res.json())
 }
 
-export const getIdProject = (id) => {
-    return fetch(`http://localhost:8088/projects/${id}`)
+export const getContractorId = (id) => {
+    return fetch(`http://localhost:8088/contractors/${id}`)
     .then(res => res.json())
 }
 
-export const getIdEstimate = (id) => {
-    return fetch(`http://localhost:8088/estimates/${id}`)
+export const getIdProject = (id) => {
+    return fetch(`http://localhost:8088/projects/${id}`)
     .then(res => res.json())
 }

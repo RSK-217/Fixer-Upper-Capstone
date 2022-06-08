@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import AddContractor from './contractors/AddContractor';
+import EditContractor from './contractors/EditContractor';
 import MyContractors from './contractors/MyContractors';
 import AddExpense from './expenses/AddExpense';
 import EditExpense from './expenses/EditExpense';
@@ -31,6 +32,7 @@ export const ApplicationViews = () => {
       
       <Route exact path="/contractors"><MyContractors /></Route>
       <Route path="/contractors/add"><AddContractor /></Route>
+      <Route path="/contractors/:contractorId(\d+)/edit"><EditContractor /></Route>
     </>
   )
 }

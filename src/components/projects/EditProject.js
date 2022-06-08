@@ -11,6 +11,14 @@ export const EditProject = () => {
         history.push(project.pro === false ? history.push(`/diyProject/${project.id}`) : history.push(`/proProject/${project.id}`))
     }
 
+    const complete = (e) => {
+        if (e.target.value === true) {
+            localStorage.setItem('checked', 'true')
+        } else {
+            localStorage.setItem('checked', 'false')
+        }
+    }
+
     useEffect(
         () => {
             getIdProject(projectId)
@@ -105,8 +113,10 @@ export const EditProject = () => {
                             const copy = { ...project }
                             copy.complete = e.target.checked
                             setProject(copy)
-                        }} 
-                        />
+                            complete(e)
+                        }}
+                        checked={project.complete}
+                    />
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={updateProject}>

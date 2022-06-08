@@ -9,8 +9,8 @@ import AddEstimate from '../estimates/AddEstimate'
 
 export const Estimates = () => {
     const [estimates, setEstimates] = useState([])
+    const [checked, setChecked] = useState({checked: false})
     const [Form, setForm] = useState([<AddEstimate />])
-
     const { projectId } = useParams()
 
     const filterEstimate = (estimatesToFilter) => {
@@ -18,6 +18,10 @@ export const Estimates = () => {
             return estimate.projectId === parseInt(projectId)
         }
         )
+    }
+
+    const radioChange = (e) => {
+        setChecked({[e.target.checked]: true})
     }
 
     const Delete = (id) => {
@@ -51,7 +55,7 @@ export const Estimates = () => {
                 }}></BsFillPlusCircleFill>  Add an estimate
             </Link>
             {estimates.map(estimate => {
-                return <div key={`estimate--${estimate.id}`}><p>$: {estimate.estimate} -&nbsp;
+                return <div key={`estimate--${estimate.id}`}><input type='radio' value='accepted' checked={checked.id} name='estimate' onChange={radioChange}/>${estimate.estimate} -&nbsp;
                     <Link to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
                     {estimate.phone}&nbsp;&nbsp;
                     <AddToMyCon estimate={estimate}/>&nbsp;&nbsp;
@@ -62,7 +66,7 @@ export const Estimates = () => {
                     </Link>&nbsp;&nbsp;
                     <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
                         Delete(estimate.id)
-                    }}></BsFillXCircleFill></p>
+                    }}></BsFillXCircleFill>
                 </div>
             })}
 

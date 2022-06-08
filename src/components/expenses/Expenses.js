@@ -21,6 +21,11 @@ export const Expenses = () => {
         )
     }
 
+    const expenseTotal = () => {
+        const sum = expenses.reduce((total, currentValue) => total = total + currentValue.amount, 0)
+        return sum
+    }
+
     const Delete = (id) => {
         fetch(`http://localhost:8088/expenses/${id}`, {
             method: "DELETE"
@@ -66,6 +71,7 @@ export const Expenses = () => {
                     }}></BsFillXCircleFill></p>
                 </div>
             })}
+            <h6>Total: ${expenseTotal()}</h6>
 
         </>
     )

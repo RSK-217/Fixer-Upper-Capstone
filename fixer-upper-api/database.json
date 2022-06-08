@@ -25,27 +25,15 @@
       "description": "When getting estimates see if filling cracks is possible.",
       "budget": 20000,
       "pro": true,
+      "complete": false,
       "id": 2
-    },
-    {
-      "title": "Kitchen Sink",
-      "description": "Replacing faucet and knobs only.",
-      "budget": 200,
-      "pro": false,
-      "id": 3
-    },
-    {
-      "title": "Carpet",
-      "description": "Rip up carpet through out the house. May need to rent truck for carpet disposal. May also need a few small tools.",
-      "budget": 200,
-      "pro": false,
-      "id": 4
     },
     {
       "title": "House painting",
       "description": "Paint brick exterior",
       "budget": 7000,
       "pro": true,
+      "complete": false,
       "id": 5
     },
     {
@@ -53,6 +41,7 @@
       "description": "new gate hinges and latch. replace broken slats",
       "budget": 230,
       "pro": false,
+      "complete": false,
       "id": 6
     },
     {
@@ -60,6 +49,7 @@
       "description": "Pull up carpet, clean and refinish",
       "budget": 1000,
       "pro": false,
+      "complete": false,
       "id": 7
     }
   ],
@@ -72,10 +62,10 @@
       "id": 2
     },
     {
-      "name": "Ham and Sons",
-      "phone": "615-990-4822",
-      "email": "",
-      "website": "",
+      "name": "ham and sons",
+      "phone": "615-999-0345",
+      "email": "ham@ham.com",
+      "website": "buildwithham.com",
       "id": 4
     }
   ],
@@ -107,36 +97,6 @@
       "amount": 133,
       "projectId": 1,
       "id": 2
-    },
-    {
-      "type": "dfgdfhdfhdf",
-      "amount": 333,
-      "projectId": 3,
-      "id": 3
-    },
-    {
-      "type": "nmbnmbnmb",
-      "amount": 66,
-      "projectId": 3,
-      "id": 4
-    },
-    {
-      "type": "ipipyuio",
-      "amount": 55,
-      "projectId": 4,
-      "id": 5
-    },
-    {
-      "type": "qweqwqwer",
-      "amount": 1111,
-      "projectId": 4,
-      "id": 6
-    },
-    {
-      "type": "drain",
-      "amount": 666,
-      "projectId": 3,
-      "id": 7
     }
   ]
 }
