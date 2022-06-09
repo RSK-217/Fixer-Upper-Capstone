@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import { getIdProject } from '../ApiManager'
 
+
+
 export const EditProject = () => {
     const [project, setProject] = useState([])
     const history = useHistory()
@@ -18,6 +20,7 @@ export const EditProject = () => {
             localStorage.setItem('checked', 'false')
         }
     }
+
 
     useEffect(
         () => {
@@ -36,7 +39,8 @@ export const EditProject = () => {
             description: project.description,
             budget: parseInt(project.budget),
             pro: project.pro === false ? false : true,
-            complete: project.complete
+            complete: project.complete,
+            finalCost: parseInt(project.finalCost)
         }
 
         fetch(`http://localhost:8088/projects/${projectId}`, {
@@ -114,11 +118,12 @@ export const EditProject = () => {
                             copy.complete = e.target.checked
                             setProject(copy)
                             complete(e)
-                        }}
+                         }}
                         checked={project.complete}
                     />
                 </div>
             </fieldset>
+
             <button className="btn btn-primary" onClick={updateProject}>
                 Save
             </button>&nbsp;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { BsFillPlusCircleFill } from 'react-icons/bs'
+import { Alert } from 'reactstrap'
 
 export const AddToMyCon = ({estimate}) => {
     
@@ -24,6 +25,7 @@ export const AddToMyCon = ({estimate}) => {
             .then(response => response.json())
             .then(() => {
                 alert('Added to My Contractors')
+                // <Alert color="info" toggle={function noRefCheck(){}}>Added to my contractors</Alert>
             })
     }
     return (

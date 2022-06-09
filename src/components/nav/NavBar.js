@@ -1,29 +1,73 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Nav, NavItem, NavLink } from "reactstrap"
 import "./NavBar.css"
 
-export const NavBar = (props) => {
+export const NavBar = () => {
     return (
-        <ul className="navbar">
-           
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/form">New Project</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/projects">My Projects</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/contractors">My Contractors</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="#"
-                onClick={
-                    () => {
-                        localStorage.removeItem("fixer_user")
-                    }
-                }>Log Out</Link>
-            </li>
-            
-        </ul>
+        <div>
+            <Nav className='navbar'>
+                <NavItem className='navbar__item'>
+                    <NavLink
+                        active
+                        href="/form">
+                        New Project
+                    </NavLink>
+                </NavItem>
+                <NavItem className='navbar__item'>
+                    <NavLink
+                        active
+                        href="/projects">
+                        Projects
+                    </NavLink>
+                </NavItem>
+                <NavItem className='navbar__item'>
+                    <NavLink
+                        active
+                        href="/contractors">
+                        Contractors
+                    </NavLink>
+                </NavItem>
+                <NavItem className='navbar__item' style={{position: 'absolute', right: 0}}>
+                    <NavLink
+                        active
+                        href="/login"
+                        onClick={() => { localStorage.removeItem("fixer_user") }}>
+                        Logout
+                    </NavLink>
+                </NavItem>
+            </Nav>
+        </div>
     )
 }
+
+export default NavBar
+
+
+
+
+
+
+
+
+
+        // <ul className="navbar">
+
+        //     <li className="navbar__item active">
+        //         <Link className="navbar__link" to="/form">New Project</Link>
+        //     </li>
+        //     <li className="navbar__item active">
+        //         <Link className="navbar__link" to="/projects">My Projects</Link>
+        //     </li>
+        //     <li className="navbar__item active">
+        //         <Link className="navbar__link" to="/contractors">My Contractors</Link>
+        //     </li>
+        //     <li className="navbar__item active">
+        //         <Link className="navbar__link" to="#"
+        //         onClick={
+        //             () => {
+        //                 localStorage.removeItem("fixer_user")
+        //             }
+        //         }>Log Out</Link>
+        //     </li>
+
+        // </ul>

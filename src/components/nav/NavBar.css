@@ -2,9 +2,19 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(215, 215, 215, 0.792);
 }
 
 .navbar__item {
-    flex-basis: 20%;
+    /* flex-basis: 30%; */
     list-style-type: none;
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
 }

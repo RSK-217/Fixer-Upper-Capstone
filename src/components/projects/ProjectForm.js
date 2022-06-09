@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import './project.css'
 
 export const ProjectForm = () => {
     const [selected, setSelected] = useState({
@@ -64,7 +65,7 @@ export const ProjectForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label>Description</label>
-                    <input
+                    <textarea
                         onChange={
                             (e) => {
                                 const copy = { ...project }
@@ -73,7 +74,7 @@ export const ProjectForm = () => {
                             }}
                         required autoFocus
                         type="text"
-                        className="form-control"
+                        className="form-textarea"
                         placeholder="description"
                     />
                 </div>
@@ -96,7 +97,7 @@ export const ProjectForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-radio">
                     <label >Hire a pro&nbsp;</label>
                     <input type="radio"
                         onChange={(e) => {
@@ -111,7 +112,7 @@ export const ProjectForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
+                <div className="form-radio">
                     <label >Do it yourself&nbsp;</label>
                     <input type="radio"
                         onChange={(e) => {

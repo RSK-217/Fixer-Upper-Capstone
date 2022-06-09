@@ -18,6 +18,7 @@
       "budget": 500,
       "pro": false,
       "complete": true,
+      "finalCost": null,
       "id": 1
     },
     {
@@ -25,7 +26,8 @@
       "description": "When getting estimates see if filling cracks is possible.",
       "budget": 20000,
       "pro": true,
-      "complete": false,
+      "complete": true,
+      "finalCost": null,
       "id": 2
     },
     {
@@ -42,6 +44,7 @@
       "budget": 230,
       "pro": false,
       "complete": false,
+      "finalCost": null,
       "id": 6
     },
     {
@@ -67,6 +70,20 @@
       "email": "ham@ham.com",
       "website": "buildwithham.com",
       "id": 4
+    },
+    {
+      "name": "Jiminy Splits Painting",
+      "phone": "615-334-2787",
+      "email": "",
+      "website": "",
+      "id": 5
+    },
+    {
+      "name": "Jiminy Splits Painting",
+      "phone": "615-334-2787",
+      "email": "",
+      "website": "",
+      "id": 6
     }
   ],
   "estimates": [
@@ -83,6 +100,13 @@
       "contractor": "Big Concrete",
       "phone": "615-777-3443",
       "id": 2
+    },
+    {
+      "estimate": 5000,
+      "projectId": 5,
+      "contractor": "Jiminy Splits Painting",
+      "phone": "615-334-2787",
+      "id": 3
     }
   ],
   "expenses": [

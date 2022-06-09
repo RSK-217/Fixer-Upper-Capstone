@@ -1,0 +1,35 @@
+.projectForm {
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.projectForm_title {
+    font-size: 5em;
+    margin-bottom: .5em;
+}
+
+.form-textarea {
+    width: 100%;
+    height: 6em;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.form-control {
+    width: 15em;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+.btn-primary {
+    margin-top: 1em;
+    margin-bottom: 4em;
+}
