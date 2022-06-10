@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import './ContractorForm.css'
 
 export const AddContractor = () => {
     const [contractor, setContractor] = useState({
@@ -41,6 +42,7 @@ export const AddContractor = () => {
 
     return (
         <form className="contractorForm">
+             <h2 className="addCon_title">Add contractor</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Name or company</label>
@@ -109,12 +111,14 @@ export const AddContractor = () => {
                     />
                 </div>
             </fieldset>
+            <section className='contractor-form-btn'>
             <button className="btn btn-primary" onClick={saveContractor}>
                 Save
             </button>&nbsp;
             <button className="btn btn-primary" onClick={cancelForm}>
                 Cancel
             </button>
+            </section>
         </form>
     )
 }

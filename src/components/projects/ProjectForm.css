@@ -1,4 +1,4 @@
-.projectForm {
+.projectForm, .EditForm {
     margin-top: 4em;
     display: flex;
     align-items: center;
@@ -7,6 +7,11 @@
 
 .projectForm_title {
     font-size: 5em;
+    margin-bottom: .5em;
+}
+
+.EditForm_title {
+    font-size: 3em;
     margin-bottom: .5em;
 }
 
@@ -21,12 +26,22 @@
     resize: none;
 }
 
+.form-radio {
+    display: flex;
+    gap: 30px;
+}
+
 .form-control {
     width: 15em;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
+}
+
+.form-button {
+    display: flex;
+    gap: 15px;
 }
 
 .btn-primary {

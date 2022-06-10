@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
+import './EstimateForm.css'
 
 export const AddEstimate = () => {
     const [estimate, setEstimate] = useState({
@@ -42,6 +43,7 @@ export const AddEstimate = () => {
 
     return (
         <form className="estimateForm">
+            <h2 className="addEstimate_title">Add an estimate</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Estimate</label>
@@ -93,12 +95,14 @@ export const AddEstimate = () => {
                     />
                 </div>
             </fieldset>
+            <section className='estimate-form-btn'>
             <button className="btn btn-primary" onClick={saveEstimate}>
                 Save
             </button>&nbsp;
             <button className="btn btn-primary" onClick={cancelForm}>
                 Cancel
             </button>
+            </section>
         </form>
     )
 }

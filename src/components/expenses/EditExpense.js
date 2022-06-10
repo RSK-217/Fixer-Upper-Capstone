@@ -43,6 +43,7 @@ export const EditExpense = () => {
 
     return (
         <form className="expenseForm">
+            <h2 className="editExpense_title">Edit expense</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Expense</label>
@@ -77,12 +78,14 @@ export const EditExpense = () => {
                     />
                 </div>
             </fieldset>
+            <section className='editEx-form-btn'>
             <button className="btn btn-primary" onClick={updateExpense}>
                 Save
             </button>&nbsp;
             <button className="btn btn-primary" onClick={cancelForm}>
                 Cancel
             </button>
+            </section>
         </form>
     )
 }

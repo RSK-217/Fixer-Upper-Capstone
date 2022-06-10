@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import { expandedEstimates } from '../ApiManager'
+import './EstimateForm.css'
 
 export const EditEstimate = () => {
     const [estimate, setEstimate] = useState([])
@@ -44,6 +45,7 @@ export const EditEstimate = () => {
 
     return (
         <form className="estimateForm">
+            <h2 className="EditEstimate_title">Edit estimate</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Estimate</label>
@@ -95,12 +97,14 @@ export const EditEstimate = () => {
                     />
                 </div>
             </fieldset>
+            <section className='editEst-form-btn'>
             <button className="btn btn-primary" onClick={updateEstimate}>
                 Save
             </button>&nbsp;
             <button className="btn btn-primary" onClick={cancelForm}>
                 Cancel
             </button>
+            </section>
         </form>
     )
 }

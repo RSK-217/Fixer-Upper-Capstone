@@ -45,6 +45,7 @@ export const EditContractor = () => {
 
     return (
         <form className="contractorForm">
+            <h2 className="editCon_title">Edit contractor</h2>
         <fieldset>
             <div className="form-group">
                 <label>Name or company</label>
@@ -113,12 +114,14 @@ export const EditContractor = () => {
                 />
             </div>
         </fieldset>
+        <section className='editCon-form-btn'>
         <button className="btn btn-primary" onClick={updateContractor}>
             Save
         </button>&nbsp;
         <button className="btn btn-primary" onClick={cancelForm}>
             Cancel
         </button>
+        </section>
     </form>
     )
 }

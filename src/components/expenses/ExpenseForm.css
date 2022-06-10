@@ -1,0 +1,21 @@
+.expenseForm {
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.addExpense_title, .editExpense_title {
+    font-size: 3em;
+    margin-bottom: .5em;
+}
+
+.expense-form-btn, .editEx-form-btn {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    margin-top: 1em;
+    margin-bottom: 4em;
+}

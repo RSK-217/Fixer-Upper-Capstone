@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
 import { getIdProject } from '../ApiManager'
+import './ProjectForm.css'
 
 
 
@@ -56,8 +57,8 @@ export const EditProject = () => {
     }
 
     return (
-        <form className="projectForm">
-            <h2 className="projectForm_title">Lets get started!</h2>
+        <form className="EditForm">
+            <h3 className="EditForm_title">Edit project</h3>
             <fieldset>
                 <div className="form-group">
                     <label>Title</label>
@@ -78,7 +79,7 @@ export const EditProject = () => {
             <fieldset>
                 <div className="form-group">
                     <label>Description</label>
-                    <input
+                    <textarea
                         onChange={
                             (e) => {
                                 const copy = { ...project }
@@ -87,7 +88,7 @@ export const EditProject = () => {
                             }}
                         required autoFocus
                         type="textarea"
-                        className="form-control"
+                        className="form-textarea"
                         value={project.description}
                     />
                 </div>
@@ -123,13 +124,14 @@ export const EditProject = () => {
                     />
                 </div>
             </fieldset>
-
+            <section className='form-button'>
             <button className="btn btn-primary" onClick={updateProject}>
                 Save
             </button>&nbsp;
             <button className="btn btn-primary" onClick={cancelForm}>
                 Cancel
             </button>
+            </section>
         </form>
     )
 

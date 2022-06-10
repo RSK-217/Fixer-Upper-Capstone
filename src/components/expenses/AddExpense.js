@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
+import './ExpenseForm.css'
 
 export const AddExpense = () => {
     const [expense, setExpense] = useState({
@@ -40,6 +41,7 @@ export const AddExpense = () => {
 
     return (
         <form className="expenseForm">
+            <h2 className="addExpense_title">Add an expense</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Expense</label>
@@ -74,12 +76,14 @@ export const AddExpense = () => {
                     />
                 </div>
             </fieldset>
+            <secton className='expense-form-btn'>
             <button className="btn btn-primary" onClick={saveExpense}>
                 Save
             </button>&nbsp;
             <button className="btn btn-primary" onClick={cancelForm}>
                 Cancel
             </button>
+            </secton>
         </form>
     )
 }

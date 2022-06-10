@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import './project.css'
+import './ProjectForm.css'
 
 export const ProjectForm = () => {
     const [selected, setSelected] = useState({
@@ -64,7 +64,7 @@ export const ProjectForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Description</label>
+                    <label className ='form-description'>Description</label>
                     <textarea
                         onChange={
                             (e) => {
@@ -96,9 +96,9 @@ export const ProjectForm = () => {
                     />
                 </div>
             </fieldset>
+            <section className='form-radio'>
             <fieldset>
-                <div className="form-radio">
-                    <label >Hire a pro&nbsp;</label>
+                <div className="form-group">
                     <input type="radio"
                         onChange={(e) => {
                             const copy = { ...project }
@@ -109,11 +109,11 @@ export const ProjectForm = () => {
                         value='option1'
                         checked={selected.selectedOption === 'option1'}
                         />
+                        <label>&nbsp;Hire a pro</label>
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-radio">
-                    <label >Do it yourself&nbsp;</label>
+                <div className="form-group">
                     <input type="radio"
                         onChange={(e) => {
                             const copy = { ...project }
@@ -125,8 +125,10 @@ export const ProjectForm = () => {
                         value='option2'
                         checked={selected.selectedOption === 'option2'}
                         />
+                        <label>&nbsp;Do it yourself</label>
                 </div>
             </fieldset>
+            </section>
             <button className="btn btn-primary" onClick={saveProject}>
                 Let's go!
             </button>
