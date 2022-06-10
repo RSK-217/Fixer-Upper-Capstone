@@ -59,18 +59,21 @@ export const Expenses = () => {
                     showForm()
                 }}></BsFillPlusCircleFill>  Add an expense
             </Link>
-            {expenses.map(expense => {
-                return <div key={`expense--${expense.id}`}><p>{expense.type}: ${expense.amount}&nbsp;&nbsp;
-                    <Link to={`/diyProject/${expense.id}/edit`}>
-                        <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
-                            editForm()
-                        }}></BsFillPencilFill>
-                    </Link>&nbsp;&nbsp;
-                    <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
-                        Delete(expense.id)
-                    }}></BsFillXCircleFill></p>
-                </div>
-            })}
+            <ul>
+                {expenses.map(expense => {
+                    return <li key={`expense--${expense.id}`}>{expense.type}: ${expense.amount}&nbsp;&nbsp;
+                        <Link to={`/diyProject/${expense.id}/edit`}>
+                            <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
+                                editForm()
+                            }}></BsFillPencilFill>
+                        </Link>&nbsp;&nbsp;
+                        <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
+                            Delete(expense.id)
+                        }}></BsFillXCircleFill>
+                    </li>}
+                    )
+                }
+            </ul>
             <h6>Total: ${expenseTotal()}</h6>
 
         </>

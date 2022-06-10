@@ -21,7 +21,7 @@ export const Estimates = () => {
     }
 
     const radioChange = (e) => {
-        setChecked({ [e.target.checked]: true })
+        setChecked({ [e.target.checked]: !false })
     }
 
 

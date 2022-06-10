@@ -89,8 +89,8 @@ export const ProjectForm = () => {
                                 copy.budget = parseInt(e.target.value)
                                 setProject(copy)
                             }}
-                        required autoFocus
-                        type="text"
+                        required autoFocus 
+                        type="text" 
                         className="form-control"
                         placeholder="$"
                     />

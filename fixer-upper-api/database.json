@@ -17,8 +17,8 @@
       "description": "Hallway, living room, spare room need to be painted. Need paint, primer, rollers and paint trays.",
       "budget": 500,
       "pro": false,
-      "complete": true,
-      "finalCost": null,
+      "complete": false,
+      "finalCost": 223,
       "id": 1
     },
     {
@@ -27,7 +27,7 @@
       "budget": 20000,
       "pro": true,
       "complete": true,
-      "finalCost": null,
+      "finalCost": 19465,
       "id": 2
     },
     {
@@ -35,7 +35,8 @@
       "description": "Paint brick exterior",
       "budget": 7000,
       "pro": true,
-      "complete": false,
+      "complete": true,
+      "finalCost": 7300,
       "id": 5
     },
     {
@@ -77,13 +78,6 @@
       "email": "",
       "website": "",
       "id": 5
-    },
-    {
-      "name": "Jiminy Splits Painting",
-      "phone": "615-334-2787",
-      "email": "",
-      "website": "",
-      "id": 6
     }
   ],
   "estimates": [
@@ -121,6 +115,24 @@
       "amount": 133,
       "projectId": 1,
       "id": 2
+    },
+    {
+      "type": "latch",
+      "amount": 25,
+      "projectId": 6,
+      "id": 3
+    },
+    {
+      "type": "hinges",
+      "amount": 18,
+      "projectId": 6,
+      "id": 4
+    },
+    {
+      "type": "wood",
+      "amount": 35,
+      "projectId": 6,
+      "id": 5
     }
   ]
 }

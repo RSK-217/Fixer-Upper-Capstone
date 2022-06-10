@@ -6,6 +6,7 @@ import { BsFillXCircleFill, BsFillPlusCircleFill, BsFillPencilFill } from 'react
 import { AddContractor } from './AddContractor';
 import { EditContractor } from './EditContractor';
 
+
 export const MyContractors = () => {
     const [contractors, setContractors] = useState([])
     const [Form, setForm] = useState([<AddContractor />])
@@ -29,8 +30,8 @@ export const MyContractors = () => {
     useEffect(
         () => {
             getAllContractors()
-                .then((contractor) => {
-                    setContractors(contractor)
+                .then((res) => {
+                    setContractors(res)
                 })
         },
         []

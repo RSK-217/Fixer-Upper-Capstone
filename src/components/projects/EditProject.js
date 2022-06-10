@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
-import { getIdProject } from '../ApiManager'
+import { getAllExpenses, getIdProject } from '../ApiManager'
+import ProCost from '../finalCost/ProCost'
 import './ProjectForm.css'
-
-
 
 export const EditProject = () => {
     const [project, setProject] = useState([])
+    const [expense, setExpense] = useState([])
     const history = useHistory()
     const { projectId } = useParams()
 
@@ -15,19 +15,53 @@ export const EditProject = () => {
     }
 
     const complete = (e) => {
-        if (e.target.value === true) {
+        if (e.target.checked) {
             localStorage.setItem('checked', 'true')
         } else {
             localStorage.setItem('checked', 'false')
         }
     }
 
+    const filterExpense = (expensesToFilter) => {
+        return expensesToFilter.filter(expense => {
+            return expense.projectId === parseInt(projectId)
+        }
+        )
+    }
+
+    const expenseTotal = () => {
+        const sum = expense.reduce((total, currentValue) => total = total + currentValue.amount, 0)
+            return sum
+    }
+
+    const handleChange = (e) => {
+        if(localStorage.getItem('checked') === true && project.pro === true){
+            const copy = { ...project }
+            copy.finalCost = e.target.value
+            setProject(copy)
+        }
+        else{
+            const copy = { ...project }
+            copy.finalCost = e.target.value
+            setProject(copy)
+        }
+    }
 
     useEffect(
         () => {
             getIdProject(projectId)
                 .then((res) => {
                     setProject(res)
+                })
+        },
+        []
+    )
+
+    useEffect(
+        () => {
+            getAllExpenses()
+                .then((res) => {
+                    setExpense(filterExpense(res))
                 })
         },
         []
@@ -119,22 +153,24 @@ export const EditProject = () => {
                             copy.complete = e.target.checked
                             setProject(copy)
                             complete(e)
-                         }}
+                        }}
                         checked={project.complete}
                     />
                 </div>
             </fieldset>
+            <fieldset>
+                <ProCost onChange={handleChange} value={project.pro === true ? project.finalCost : expenseTotal()} />
+            </fieldset>
             <section className='form-button'>
-            <button className="btn btn-primary" onClick={updateProject}>
-                Save
-            </button>&nbsp;
-            <button className="btn btn-primary" onClick={cancelForm}>
-                Cancel
-            </button>
+                <button className="btn btn-primary" onClick={updateProject}>
+                    Save
+                </button>&nbsp;
+                <button className="btn btn-primary" onClick={cancelForm}>
+                    Cancel
+                </button>
             </section>
         </form>
     )
-
 }
 
 export default EditProject
