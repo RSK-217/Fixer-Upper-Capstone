@@ -55,8 +55,9 @@ export const Estimates = () => {
                     showForm()
                 }}></BsFillPlusCircleFill>  Add an estimate
             </Link>
+            <ul>
             {estimates.map(estimate => {
-                return <div key={`estimate--${estimate.id}`}><input type='radio' value='accepted' checked={checked.id} name='estimate' onChange={radioChange} />${estimate.estimate} -&nbsp;
+                return <li key={`estimate--${estimate.id}`}>${estimate.estimate} -&nbsp;
                     <Link to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
                     {estimate.phone}&nbsp;&nbsp;
                     <AddToMyCon estimate={estimate} />&nbsp;&nbsp;
@@ -68,8 +69,8 @@ export const Estimates = () => {
                     <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
                         Delete(estimate.id)
                     }}></BsFillXCircleFill>
-                </div>
-            })}
+                </li>
+            })}</ul>
 
         </>
     )

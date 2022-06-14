@@ -1,0 +1,55 @@
+.header-title {
+  margin-left: 17px;
+}
+
+.filter-link {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 18px 0 18px;
+}
+
+.default-card-img {
+  width: 5em;
+  height: 5em;
+  border: black 1px solid;
+}
+
+.default-project-img {
+  display: block;
+  width: 10em;
+  height: 10em;
+}
+
+.card {
+  margin: .5em;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: x-large;
+  text-align: start;
+}
+
+.card-wrap {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  padding: 10px;
+}
+
+.card-description {
+  font-size: medium;
+  text-align: start;
+}
+
+.card-footer {
+  display: flex;
+  
+}
+

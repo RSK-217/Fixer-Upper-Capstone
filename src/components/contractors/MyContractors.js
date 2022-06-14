@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getAllContractors } from '../ApiManager'
-import { Card, CardImg, CardBody, CardTitle, CardText } from 'reactstrap';
+import { Card, CardImg, CardBody, CardTitle, CardText, CardHeader, CardFooter, Container, Row, Col } from 'reactstrap';
 import { BsFillXCircleFill, BsFillPlusCircleFill, BsFillPencilFill } from 'react-icons/bs'
 import { AddContractor } from './AddContractor';
 import { EditContractor } from './EditContractor';
+import './Contractor.css'
 
 
 export const MyContractors = () => {
@@ -39,28 +40,41 @@ export const MyContractors = () => {
 
     return (
         <>
-            <h1>My Contractors</h1>
-            <Link to='/contractors/add'><BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
-                showForm()
-            }}></BsFillPlusCircleFill>  Add a new contractor</Link>
-            {contractors.map((contractor) => {
-                return <Card key={`contractor--${contractor.id}`}>
-                    <CardBody>
-                        <CardImg></CardImg>
-                        <CardTitle><h3>{contractor.name} </h3></CardTitle>
-                        <CardText>phone: {contractor.phone}</CardText>
-                        <CardText>email: {contractor.email}</CardText>
-                        <CardText>website: {contractor.website}</CardText>
-                        <Link to={`/contractors/${contractor.id}/edit`}>
-                        <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
-                            editForm()
-                        }}></BsFillPencilFill></Link>&nbsp;&nbsp;
-                        <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
-                            Delete(contractor.id)
-                        }}></BsFillXCircleFill> 
-                    </CardBody>
-                </Card>
-            })}
+            <Container fluid>
+                <div className='contractor-head'>
+                    <h1>My Contractors</h1>
+                    <Link className='new-contractor' to='/contractors/add'><BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
+                        showForm()
+                    }}></BsFillPlusCircleFill>  Add a new contractor</Link>
+                </div>
+                <Row>
+                    <Col>
+                        <div className='contractor-wrap'>{contractors.map((contractor) => {
+                            return <Card className='contractor' key={`contractor--${contractor.id}`}>
+                                <CardHeader> <CardImg className='con-img' variant='top' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVq3fPtbcHMZCAAETJoZ9zukfSSUgup298ZQ&usqp=CAU' alt='contractor default image'></CardImg></CardHeader>
+                                <CardBody>
+                                    <CardTitle className='con-title'><h3>{contractor.name} </h3></CardTitle>
+                                    <CardText className='con-text'><b>phone</b><br />{contractor.phone}</CardText>
+                                    <CardText className='con-text'><b>email</b><br />{contractor.email}</CardText>
+                                    <CardText className='con-text'><b>website</b><br />{contractor.website}</CardText>
+                                </CardBody>
+                                <CardFooter className='edit-delete'>
+                                    <Link to={`/contractors/${contractor.id}/edit`}>
+                                        <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
+                                            editForm()
+                                        }}></BsFillPencilFill></Link>&nbsp;&nbsp;
+                                    <BsFillXCircleFill className='delete' color='red' style={{ cursor: "pointer" }} onClick={() => {
+                                        Delete(contractor.id)
+                                    }}></BsFillXCircleFill>
+                                </CardFooter>
+                            </Card>
+                        }
+                        )
+                        }
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
         </>
     )
 }

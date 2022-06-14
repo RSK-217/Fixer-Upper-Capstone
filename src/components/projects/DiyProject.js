@@ -50,6 +50,7 @@ const DiyProject = () => {
 
     return (
         <>
+            <img className='default-project-img' src='https://static.vecteezy.com/system/resources/previews/000/425/085/non_2x/house-icon-vector-illustration.jpg' alt='home icon default' />
             <h1>{projectComplete()}</h1>
             <h2>{project.title}</h2>
             <p>{project.description}</p>

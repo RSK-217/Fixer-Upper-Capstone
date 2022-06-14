@@ -1,0 +1,56 @@
+.contractor-head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    margin-left: 17px;
+}
+
+.new-contractor {
+    align-self: flex-end;
+    margin-right: 18px;
+    margin-bottom: 7px;
+}
+
+.contractor-wrap {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    padding: 10px;
+}
+
+.contractor {
+    margin: .5em;
+    padding: 10px;
+    text-align: center;
+}
+
+.con-img {
+    display: flex;
+    justify-content: flex-start;
+    
+    width: 5em;
+    height: 5em;
+    border: black 1px solid;
+}
+
+.con-title {
+    font-size: x-large;
+    text-align: start;
+    margin-bottom: 15px;
+}
+
+.con-text {
+    font-size: medium;
+    text-align: start;
+    padding-left: 10px;
+}
+
+.edit-delete {
+    text-align: start;
+    padding-left: 12px;
+}
+
+.delete {
+    margin-top: 6px;
+    margin-left: 4px;
+}

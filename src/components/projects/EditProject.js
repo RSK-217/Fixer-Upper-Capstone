@@ -31,16 +31,16 @@ export const EditProject = () => {
 
     const expenseTotal = () => {
         const sum = expense.reduce((total, currentValue) => total = total + currentValue.amount, 0)
-            return sum
+        return sum
     }
 
     const handleChange = (e) => {
-        if(localStorage.getItem('checked') === true && project.pro === true){
+        if (localStorage.getItem('checked') === true && project.pro === true) {
             const copy = { ...project }
             copy.finalCost = e.target.value
             setProject(copy)
         }
-        else{
+        else {
             const copy = { ...project }
             copy.finalCost = e.target.value
             setProject(copy)
@@ -75,7 +75,9 @@ export const EditProject = () => {
             budget: parseInt(project.budget),
             pro: project.pro === false ? false : true,
             complete: project.complete,
-            finalCost: parseInt(project.finalCost)
+            finalCost: parseInt(project.finalCost),
+            img: project.img
+
         }
 
         fetch(`http://localhost:8088/projects/${projectId}`, {
@@ -159,7 +161,8 @@ export const EditProject = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <ProCost onChange={handleChange} value={project.pro === true ? project.finalCost : expenseTotal()} />
+                {project.complete ? <ProCost onChange={handleChange} value={project.pro === true ? project.finalCost : expenseTotal()} /> : <></>}
+              
             </fieldset>
             <section className='form-button'>
                 <button className="btn btn-primary" onClick={updateProject}>

@@ -36,7 +36,7 @@
       "budget": 7000,
       "pro": true,
       "complete": true,
-      "finalCost": 7300,
+      "finalCost": 7500,
       "id": 5
     },
     {
@@ -66,7 +66,7 @@
       "id": 2
     },
     {
-      "name": "ham and sons",
+      "name": "Ham and Sons",
       "phone": "615-999-0345",
       "email": "ham@ham.com",
       "website": "buildwithham.com",
@@ -78,6 +78,13 @@
       "email": "",
       "website": "",
       "id": 5
+    },
+    {
+      "name": "Horse ",
+      "phone": "615-909-8344",
+      "email": "horse@horse.com",
+      "website": "horse.com",
+      "id": 6
     }
   ],
   "estimates": [
