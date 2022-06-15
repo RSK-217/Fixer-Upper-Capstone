@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { getAllExpenses } from '../ApiManager'
 import { Expenses } from '../expenses/Expenses'
+import Budget from '../finalCost/Budget'
 import { FinalCost } from '../finalCost/finalCost'
+import './Project.css'
 
 const DiyProject = () => {
     const [project, setProject] = useState({})
@@ -20,10 +22,16 @@ const DiyProject = () => {
         return project.complete === true ? 'PROJECT COMPLETE' : ''
     }
 
+    const budget = () => {
+        if(project.pro === false){
+            return <Budget value={project.budget}/>
+        }
+    }
+
     const cost = () => {
-        if(project.complete === true){
+        if (project.complete === true) {
             const sum = expense.reduce((total, currentValue) => total = total + currentValue.amount, 0)
-            return <FinalCost value={sum}/>
+            return <FinalCost value={sum} />
         }
     }
 
@@ -43,7 +51,7 @@ const DiyProject = () => {
             getAllExpenses()
                 .then((data) => {
                     setExpense(filterExpense(data))
-                }) 
+                })
         },
         []
     )
@@ -54,7 +62,7 @@ const DiyProject = () => {
             <h1>{projectComplete()}</h1>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <h4>Budget: </h4><p>${project.budget}</p>{cost()}
+            {budget()}{cost()}
             <Link to={`/diyProject/${projectId}/editProject`}>Edit project details</Link>
             <Expenses />
 

@@ -3,7 +3,7 @@ import React from 'react'
 export const FinalCost = ({value}) => {
     
     return (
-    <h4>Final Cost: ${value}</h4>
+    <h4>Final Cost: ${value.toLocaleString()}</h4>
   )
 }
 

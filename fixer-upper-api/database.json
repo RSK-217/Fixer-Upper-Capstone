@@ -17,7 +17,7 @@
       "description": "Hallway, living room, spare room need to be painted. Need paint, primer, rollers and paint trays.",
       "budget": 500,
       "pro": false,
-      "complete": false,
+      "complete": true,
       "finalCost": 223,
       "id": 1
     },
@@ -66,13 +66,6 @@
       "id": 2
     },
     {
-      "name": "Ham and Sons",
-      "phone": "615-999-0345",
-      "email": "ham@ham.com",
-      "website": "buildwithham.com",
-      "id": 4
-    },
-    {
       "name": "Jiminy Splits Painting",
       "phone": "615-334-2787",
       "email": "",
@@ -83,14 +76,14 @@
       "name": "Horse ",
       "phone": "615-909-8344",
       "email": "horse@horse.com",
-      "website": "horse.com",
+      "website": "www.horse.com",
       "id": 6
     },
     {
       "name": "Frog ",
       "phone": "615-823-3965",
       "email": "frog@frogair.com",
-      "website": "https://www.frogair.com/",
+      "website": "http://www.frogair.com/",
       "id": 7
     },
     {
@@ -101,6 +94,15 @@
       "estimateId": 2,
       "projectId": 2,
       "id": 8
+    },
+    {
+      "name": "Ham and Sons",
+      "phone": "615-990-4822",
+      "email": "",
+      "website": "www.ham.com",
+      "estimateId": 1,
+      "projectId": 2,
+      "id": 9
     }
   ],
   "estimates": [

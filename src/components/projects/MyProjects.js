@@ -4,7 +4,7 @@ import { getAllProjects } from '../ApiManager'
 import { Row, Col, Card, CardImg, CardBody, CardTitle, CardText, CardHeader, CardFooter, Container } from 'reactstrap';
 import { BsFillXCircleFill, BsFillPlusCircleFill } from 'react-icons/bs'
 import Filter from '../filter/Filter';
-import './project.css'
+import './MyProjects.css'
 
 
 export const MyProjects = () => {

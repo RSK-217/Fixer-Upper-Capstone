@@ -6,29 +6,29 @@ export const NavBar = () => {
     return (
         <div>
             <Nav className='navbar'>
-                <NavItem className='navbar__item'>
-                    <NavLink
+                <NavItem className='navbar-item'>
+                    <NavLink className='navbar-link'
                         active
                         href="/form">
                         New Project
                     </NavLink>
                 </NavItem>
-                <NavItem className='navbar__item'>
-                    <NavLink
+                <NavItem className='navbar-item'>
+                    <NavLink className='navbar-link'
                         active
                         href="/projects">
                         Projects
                     </NavLink>
                 </NavItem>
-                <NavItem className='navbar__item'>
-                    <NavLink
+                <NavItem className='navbar-item'>
+                    <NavLink className='navbar-link'
                         active
                         href="/contractors">
                         Contractors
                     </NavLink>
                 </NavItem>
-                <NavItem className='navbar__item' style={{position: 'absolute', right: 0}}>
-                    <NavLink
+                <NavItem className='navbar-item' style={{position: 'absolute', right: 0}}>
+                    <NavLink className='navbar-link'
                         active
                         href="/login"
                         onClick={() => { localStorage.removeItem("fixer_user") }}>

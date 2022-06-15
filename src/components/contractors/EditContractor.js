@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom'
-import { getContractorId } from '../ApiManager'
+import { getAllEstimates, getContractorId } from '../ApiManager'
 
 export const EditContractor = () => {
     const [contractor, setContractor] = useState([])
@@ -27,7 +27,9 @@ export const EditContractor = () => {
             name: contractor.name,
             phone: contractor.phone,
             email: contractor.email,
-            website: contractor.website
+            website: contractor.website,
+            estimateId: contractor.estimateId,
+            projectId: contractor.projectId
         }
 
         fetch(`http://localhost:8088/contractors/${contractorId}`, {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import {  getAllContractors, getAllEstimates } from '../ApiManager'
+import { getAllContractors, getAllEstimates } from '../ApiManager'
 import { Card, CardImg, CardBody, CardTitle, CardText, CardHeader, CardFooter, Container, Row, Col } from 'reactstrap';
 import { BsFillXCircleFill, BsFillPlusCircleFill, BsFillPencilFill } from 'react-icons/bs'
 import { AddContractor } from './AddContractor';
@@ -15,6 +15,7 @@ export const MyContractors = () => {
     const [edit, setEdit] = useState([<EditContractor />])
     const [filterSetting, setFilter] = useState('')
 
+
     const showForm = () => {
         setForm(!Form)
     }
@@ -25,7 +26,7 @@ export const MyContractors = () => {
 
     const filterContractors = () => {
         if (filterSetting === 'estimate') {
-            return contractors.filter(c => c.estimateId !== estimate.id )
+            return contractors.filter(c => c.estimateId !== estimate.id)
         }
         return contractors
     }
@@ -60,9 +61,9 @@ export const MyContractors = () => {
     return (
         <>
             <Container fluid>
-                <div className='contractor-head'>
-                    <h1>My Contractors</h1>
-                    <ContractorFilter value={filterSetting} setFilter={setFilter} />
+                <h1 className='con-header-title'>My Contractors</h1>
+                <div className='con-filter-link'>
+                    <ContractorFilter className='con-filter' value={filterSetting} setFilter={setFilter} />
                     <Link className='new-contractor' to='/contractors/add'><BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
                         showForm()
                     }}></BsFillPlusCircleFill>  Add a new contractor</Link>
@@ -77,6 +78,7 @@ export const MyContractors = () => {
                                     <CardText className='con-text'><b>phone</b><br />{contractor.phone}</CardText>
                                     <CardText className='con-text'><b>email</b><br />{contractor.email}</CardText>
                                     <CardText className='con-text'><b>website</b><br /><a href={contractor.website} target='_blank'>{contractor.website}</a></CardText>
+                                    {contractor.estimateId !== estimate.id ? <CardText className='con-text'><Link to={`/proProject/${contractor.projectId}`}>Go to estimate</Link></CardText> : ''}
                                 </CardBody>
                                 <CardFooter className='edit-delete'>
                                     <Link to={`/contractors/${contractor.id}/edit`}>
