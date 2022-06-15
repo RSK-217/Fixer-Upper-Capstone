@@ -10,7 +10,9 @@ export const AddToMyCon = ({estimate}) => {
             name: estimate.contractor,
             phone: estimate.phone,
             email: '',
-            website: ''
+            website: '',
+            estimateId: estimate.id,
+            projectId: estimate.projectId
         }
 
         const fetchOptions = {

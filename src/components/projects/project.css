@@ -5,7 +5,7 @@
 .filter-link {
   display: flex;
   justify-content: space-between;
-  margin: 0 18px 0 18px;
+  margin: 0 40px 0 40px;
 }
 
 .default-card-img {
@@ -38,9 +38,10 @@
 
 .card-wrap {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 30% 30% 30%;
   grid-template-rows: auto;
   padding: 10px;
+  justify-content: center;
 }
 
 .card-description {

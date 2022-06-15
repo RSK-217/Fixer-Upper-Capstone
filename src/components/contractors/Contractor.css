@@ -13,9 +13,10 @@
 
 .contractor-wrap {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 30% 30% 30%;
     grid-template-rows: auto;
     padding: 10px;
+    justify-content: center;
 }
 
 .contractor {
@@ -27,7 +28,6 @@
 .con-img {
     display: flex;
     justify-content: flex-start;
-    
     width: 5em;
     height: 5em;
     border: black 1px solid;
@@ -48,6 +48,7 @@
 .edit-delete {
     text-align: start;
     padding-left: 12px;
+    
 }
 
 .delete {
