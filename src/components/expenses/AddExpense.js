@@ -76,14 +76,14 @@ export const AddExpense = () => {
                     />
                 </div>
             </fieldset>
-            <secton className='expense-form-btn'>
+            <section className='expense-form-btn'>
             <button className="btn btn-primary" onClick={saveExpense}>
                 Save
             </button>&nbsp;
             <button className="btn btn-primary" onClick={cancelForm}>
                 Cancel
             </button>
-            </secton>
+            </section>
         </form>
     )
 }

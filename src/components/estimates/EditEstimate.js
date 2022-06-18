@@ -59,7 +59,7 @@ export const EditEstimate = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={estimate.estimate}
+                        value={estimate.estimate || ''}
                     />
                 </div>
             </fieldset>
@@ -76,7 +76,7 @@ export const EditEstimate = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={estimate.contractor}
+                        value={estimate.contractor || ''}
                     />
                 </div>
             </fieldset>
@@ -93,7 +93,7 @@ export const EditEstimate = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={estimate.phone}
+                        value={estimate.phone || ''}
                     />
                 </div>
             </fieldset>

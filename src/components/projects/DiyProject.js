@@ -4,6 +4,7 @@ import { getAllExpenses } from '../ApiManager'
 import { Expenses } from '../expenses/Expenses'
 import Budget from '../finalCost/Budget'
 import { FinalCost } from '../finalCost/finalCost'
+import { BsFillPencilFill } from 'react-icons/bs'
 import './Project.css'
 
 const DiyProject = () => {
@@ -19,12 +20,12 @@ const DiyProject = () => {
     }
 
     const projectComplete = () => {
-        return project.complete === true ? 'PROJECT COMPLETE' : ''
+        return project.complete === true ? 'PROJECT COMPLETE!' : ''
     }
 
     const budget = () => {
-        if(project.pro === false){
-            return <Budget value={project.budget}/>
+        if (project.pro === false) {
+            return <Budget value={project.budget} />
         }
     }
 
@@ -58,12 +59,25 @@ const DiyProject = () => {
 
     return (
         <>
-            <img className='default-project-img' src='https://static.vecteezy.com/system/resources/previews/000/425/085/non_2x/house-icon-vector-illustration.jpg' alt='home icon default' />
-            <h1>{projectComplete()}</h1>
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            {budget()}{cost()}
-            <Link to={`/diyProject/${projectId}/editProject`}>Edit project details</Link>
+            <header className='header'>
+                <img className='default-project-img' src='https://static.vecteezy.com/system/resources/previews/000/425/085/non_2x/house-icon-vector-illustration.jpg' alt='home icon default' />
+                <h1 className='title'>{project.title}</h1>
+            </header>
+
+            <section className='aside'>
+                <h4 className='project-type'>D.I.Y Project</h4>
+                <h1 className='complete'>{projectComplete()}</h1>
+                {budget()}{cost()}
+            </section>
+
+            <section className='details'>
+                <div className='details-header'>
+                    <h4 className='description-title'>Project notes</h4>
+                    <Link className='edit' to={`/diyProject/${projectId}/editProject`}><BsFillPencilFill color='orange'></BsFillPencilFill>&nbsp;&nbsp;Edit project</Link>
+                </div>
+                <p className='description'>{project.description}</p>
+            </section>
+
             <Expenses />
 
         </>

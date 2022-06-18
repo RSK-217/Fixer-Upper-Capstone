@@ -6,6 +6,7 @@ import { BsFillXCircleFill } from 'react-icons/bs'
 import { BsFillPencilFill } from 'react-icons/bs'
 import { AddToMyCon } from './AddToMyCon'
 import AddEstimate from '../estimates/AddEstimate'
+import './Estimate.css'
 
 export const Estimates = () => {
     const [estimates, setEstimates] = useState([])
@@ -48,30 +49,35 @@ export const Estimates = () => {
 
     return (
         <>
-            { }
-            <h4>Estimates</h4>
-            <Link to={`/proProject/${projectId}/add`}>
+        <section className='estimate-section'>
+        <div className='estimate-header'>
+            <h4 className='estimate-title'>Estimates</h4>
+            <Link to={`/proProject/${projectId}/add`} className='add-estimate'>
                 <BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
                     showForm()
-                }}></BsFillPlusCircleFill>  Add an estimate
+                }}></BsFillPlusCircleFill>  estimate
             </Link>
+            </div>
             <ul>
             {estimates.map(estimate => {
-                return <li key={`estimate--${estimate.id}`}>${estimate.estimate} -&nbsp;
+                return <li key={`estimate--${estimate.id}`} className='icon-link'>${estimate.estimate.toLocaleString()} -&nbsp;
                     <Link to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
                     {estimate.phone}&nbsp;&nbsp;
                     <AddToMyCon estimate={estimate} />&nbsp;&nbsp;
                     <Link to={`/proProject/${estimate.id}/edit`}>
-                        <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
+                        <BsFillPencilFill className='estimate-edit' style={{ cursor: "pointer" }} onClick={() => {
                             showForm()
                         }}></BsFillPencilFill>
                     </Link>&nbsp;&nbsp;
-                    <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
+                    <BsFillXCircleFill className='estimate-delete' style={{ cursor: "pointer" }} onClick={() => {
                         Delete(estimate.id)
                     }}></BsFillXCircleFill>
                 </li>
-            })}</ul>
-
+                
+                }
+            )
+            }</ul>
+            </section>
         </>
     )
 }

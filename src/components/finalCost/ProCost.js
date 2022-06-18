@@ -6,9 +6,9 @@ export const ProCost = ({onChange, value}) => {
     <div className="form-group">
         <label>Final Cost</label>
           <input
+            required autoFocus
             onChange={onChange}
             value={value}
-            required autoFocus
             type="text"
             className="form-control"
             />

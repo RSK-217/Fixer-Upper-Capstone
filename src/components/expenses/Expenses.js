@@ -6,6 +6,7 @@ import { EditExpense } from './EditExpense'
 import { BsFillPlusCircleFill } from 'react-icons/bs'
 import { BsFillXCircleFill } from 'react-icons/bs'
 import { BsFillPencilFill } from 'react-icons/bs'
+import './Expense.css'
 
 export const Expenses = () => {
     const [expenses, setExpense] = useState([])
@@ -53,29 +54,34 @@ export const Expenses = () => {
 
     return (
         <>
-            <h4>Expenses</h4>
-            <Link to={`/diyProject/${projectId}/add`}>
-                <BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
-                    showForm()
-                }}></BsFillPlusCircleFill>  Add an expense
-            </Link>
-            <ul>
-                {expenses.map(expense => {
-                    return <li key={`expense--${expense.id}`}>{expense.type}: ${expense.amount}&nbsp;&nbsp;
-                        <Link to={`/diyProject/${expense.id}/edit`}>
-                            <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
-                                editForm()
-                            }}></BsFillPencilFill>
-                        </Link>&nbsp;&nbsp;
-                        <BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
-                            Delete(expense.id)
-                        }}></BsFillXCircleFill>
-                    </li>}
+            <section className='expense-section'>
+                <div className='expense-header'>
+                    <h4 className='expense-title'>Expenses</h4>
+                    <Link to={`/diyProject/${projectId}/add`} className='add-expense'>
+                        <BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
+                            showForm()
+                        }}></BsFillPlusCircleFill>  expense
+                    </Link>
+                </div>
+                <ul>
+                    {expenses.map(expense => {
+                        return <li key={`expense--${expense.id}`} className='icon-link'>{expense.type}: ${expense.amount.toLocaleString()}
+                                <Link to={`/diyProject/${expense.id}/edit`}>
+                                    <BsFillPencilFill className='expense-edit' style={{ cursor: "pointer" }} onClick={() => {
+                                        editForm()
+                                    }}></BsFillPencilFill>
+                                </Link>
+                                <BsFillXCircleFill className='expense-delete' style={{ cursor: "pointer" }} onClick={() => {
+                                    Delete(expense.id)
+                                }}></BsFillXCircleFill>
+                            </li>
+                        
+                    }
                     )
-                }
-            </ul>
-            <h6>Total: ${expenseTotal()}</h6>
-
+                    }
+                </ul>
+                <h6>Total: ${expenseTotal()}</h6>
+            </section>
         </>
     )
 }

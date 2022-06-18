@@ -57,7 +57,7 @@ export const EditExpense = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={expense.type}
+                        value={expense.type || ''}
                     />
                 </div>
             </fieldset>
@@ -74,7 +74,7 @@ export const EditExpense = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={expense.amount}
+                        value={expense.amount || ''}
                     />
                 </div>
             </fieldset>

@@ -1,5 +1,72 @@
+.header {
+  display: flex;
+}
+
 .default-project-img {
-    display: block;
-    width: 10em;
-    height: 10em;
-  }
+  display: block;
+  width: 12em;
+  height: 12em;
+  border: solid 1px;
+  margin: 10px;
+
+}
+
+.title {
+  font-size: 5em;
+  padding: 30px 0 0 60px;
+}
+
+.complete {
+  margin-top: 10px;
+  font-size: 2em;
+ 
+}
+
+.aside {
+  width: 12em;
+  height: fit-content;
+  padding: 15px;
+  margin-left: 10px;
+  float: left;
+  background-color: lightgray;
+  border: solid 1px;
+}
+
+.project-type {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.budget {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.finalcost {
+  font-size: 20px;
+  color: red;
+}
+
+.details {
+  border: solid 1px;
+  border-radius: 15px;
+  width: 50%;
+  margin-left: 250px;
+  padding: 10px
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.description {
+  padding-left: 10px;
+
+}
+

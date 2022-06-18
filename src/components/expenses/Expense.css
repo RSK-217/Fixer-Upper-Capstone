@@ -1,0 +1,37 @@
+.expense-section {
+    border: solid 1px;
+    border-radius: 15px;
+    width: 30%;
+    margin: 30px 0 15px 250px;
+    padding: 10px
+  }
+
+.expense-header {
+    display: flex;
+    justify-content: space-between;
+}
+.expense-title {
+    margin-bottom: 13px;
+    
+}
+
+.add-expense {
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.icon-link {
+    margin-bottom: 7px;
+}
+
+.expense-edit {
+    font-size: 13px;
+    margin: 0 0 3px 15px;
+    color: orange;
+}
+
+.expense-delete {
+    font-size: 13px;
+    margin: 0 0 3px 10px;
+    color: red; 
+}

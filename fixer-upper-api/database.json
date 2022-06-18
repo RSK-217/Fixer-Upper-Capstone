@@ -15,10 +15,10 @@
     {
       "title": "Interior painting",
       "description": "Hallway, living room, spare room need to be painted. Need paint, primer, rollers and paint trays.",
-      "budget": 500,
+      "budget": 400,
       "pro": false,
       "complete": true,
-      "finalCost": 223,
+      "finalCost": 22,
       "id": 1
     },
     {
@@ -27,7 +27,7 @@
       "budget": 20000,
       "pro": true,
       "complete": true,
-      "finalCost": 19465,
+      "finalCost": 19470,
       "id": 2
     },
     {
@@ -36,25 +36,26 @@
       "budget": 7000,
       "pro": true,
       "complete": true,
-      "finalCost": 7500,
+      "finalCost": 7001,
       "id": 5
-    },
-    {
-      "title": "fix the fence",
-      "description": "new gate hinges and latch. replace broken slats",
-      "budget": 230,
-      "pro": false,
-      "complete": false,
-      "finalCost": null,
-      "id": 6
     },
     {
       "title": "Refinish floors",
       "description": "Pull up carpet, clean and refinish",
       "budget": 1000,
       "pro": false,
-      "complete": false,
+      "complete": true,
+      "finalCost": null,
       "id": 7
+    },
+    {
+      "title": "Replace bathroom faucet",
+      "description": "Replacing faucet and handles only.",
+      "budget": 300,
+      "pro": false,
+      "complete": true,
+      "finalCost": null,
+      "id": 8
     }
   ],
   "contractors": [
@@ -126,6 +127,20 @@
       "contractor": "Jiminy Splits Painting",
       "phone": "615-334-2787",
       "id": 3
+    },
+    {
+      "estimate": 21000,
+      "projectId": 2,
+      "contractor": "Hammer Bros",
+      "phone": "615-990-8777",
+      "id": 4
+    },
+    {
+      "estimate": 17000,
+      "projectId": 2,
+      "contractor": "The building Co",
+      "phone": "615-333-2222",
+      "id": 5
     }
   ],
   "expenses": [
@@ -136,28 +151,28 @@
       "id": 1
     },
     {
-      "type": "Paint rollers and trayzssaas",
-      "amount": 133,
-      "projectId": 1,
-      "id": 2
+      "type": "sander",
+      "amount": 300,
+      "projectId": 7,
+      "id": 6
     },
     {
-      "type": "latch",
-      "amount": 25,
-      "projectId": 6,
-      "id": 3
+      "type": "faucet set",
+      "amount": 90,
+      "projectId": 8,
+      "id": 7
     },
     {
-      "type": "hinges",
-      "amount": 18,
-      "projectId": 6,
-      "id": 4
+      "type": "wrench",
+      "amount": 30,
+      "projectId": 8,
+      "id": 8
     },
     {
-      "type": "wood",
-      "amount": 35,
-      "projectId": 6,
-      "id": 5
+      "type": "varnish",
+      "amount": 170,
+      "projectId": 7,
+      "id": 9
     }
   ]
 }

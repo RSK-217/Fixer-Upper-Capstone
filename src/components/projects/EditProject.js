@@ -35,7 +35,7 @@ export const EditProject = () => {
     }
 
     const handleChange = (e) => {
-        if (localStorage.getItem('checked') === true && project.pro === true) {
+        if (project.pro === true) {
             const copy = { ...project }
             copy.finalCost = e.target.value
             setProject(copy)
@@ -43,6 +43,7 @@ export const EditProject = () => {
         else {
             const copy = { ...project }
             copy.finalCost = e.target.value
+            console.log(!isNaN(+copy.finalCost))
             setProject(copy)
         }
     }
@@ -75,8 +76,7 @@ export const EditProject = () => {
             budget: parseInt(project.budget),
             pro: project.pro === false ? false : true,
             complete: project.complete,
-            finalCost: parseInt(project.finalCost),
-            img: project.img
+            finalCost: parseInt(project.finalCost)
 
         }
 
@@ -108,7 +108,7 @@ export const EditProject = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={project.title}
+                        value={project.title || ''}
                     />
                 </div>
             </fieldset>
@@ -125,7 +125,7 @@ export const EditProject = () => {
                         required autoFocus
                         type="textarea"
                         className="form-textarea"
-                        value={project.description}
+                        value={project.description || ''}
                     />
                 </div>
             </fieldset>
@@ -142,7 +142,7 @@ export const EditProject = () => {
                         required autoFocus
                         type="text"
                         className="form-control"
-                        value={project.budget}
+                        value={project.budget || ''}
                     />
                 </div>
             </fieldset>
@@ -156,7 +156,7 @@ export const EditProject = () => {
                             setProject(copy)
                             complete(e)
                         }}
-                        checked={project.complete}
+                        checked={project.complete || ''}
                     />
                 </div>
             </fieldset>

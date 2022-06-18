@@ -31,7 +31,7 @@ export const AddToMyCon = ({estimate}) => {
             })
     }
     return (
-        <BsFillPlusCircleFill color='green' style={{ cursor: "pointer" }} onClick={() => {saveContractor()}}></BsFillPlusCircleFill>
+        <BsFillPlusCircleFill className='add-my-contractor' style={{ cursor: "pointer" }} onClick={() => {saveContractor()}}></BsFillPlusCircleFill>
     )
 }
 

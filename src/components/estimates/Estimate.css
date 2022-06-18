@@ -1,0 +1,44 @@
+.estimate-section {
+    border: solid 1px;
+    border-radius: 15px;
+    width: 40%;
+    margin: 30px 0 15px 250px;
+    padding: 10px
+  }
+
+.estimate-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.estimate-title {
+    margin-bottom: 13px;
+    
+}
+
+.add-estimate {
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.icon-link {
+    margin-bottom: 7px;
+}
+
+.add-my-contractor {
+    font-size: 13px;
+    margin: 0 0 3px 15px;
+    color: green;
+}
+
+.estimate-edit {
+    font-size: 13px;
+    margin: 0 0 3px 5px;
+    color: orange;
+}
+
+.estimate-delete {
+    font-size: 13px;
+    margin: 0 0 3px 5px;
+    color: red; 
+}

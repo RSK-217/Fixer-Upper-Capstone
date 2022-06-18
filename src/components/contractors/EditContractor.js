@@ -61,7 +61,7 @@ export const EditContractor = () => {
                     required autoFocus
                     type="text"
                     className="form-control"
-                    value={contractor.name}
+                    value={contractor.name || ''}
                 />
             </div>
         </fieldset>
@@ -78,7 +78,7 @@ export const EditContractor = () => {
                     required autoFocus
                     type="text"
                     className="form-control"
-                    value={contractor.phone}
+                    value={contractor.phone || ''}
                 />
             </div>
         </fieldset>
@@ -95,7 +95,7 @@ export const EditContractor = () => {
                     required autoFocus
                     type="text"
                     className="form-control"
-                    value={contractor.email}
+                    value={contractor.email || ''}
                 />
             </div>
         </fieldset>
@@ -112,7 +112,7 @@ export const EditContractor = () => {
                     required autoFocus
                     type="text"
                     className="form-control"
-                    value={contractor.website}
+                    value={contractor.website || ''}
                 />
             </div>
         </fieldset>
