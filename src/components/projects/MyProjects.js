@@ -34,11 +34,6 @@ export const MyProjects = () => {
         return projects
     }
 
-    // const projectLink = () => {
-    //     {filterProjects().map((project) => {
-    //     {project.pro === false ? <Link to={`/diyProject/${project.id}`}></Link> : <Link to={`/proProject/${project.id}`}></Link>}
-    // })}}
-
     useEffect(
         () => {
             getAllProjects()
@@ -51,7 +46,7 @@ export const MyProjects = () => {
 
     return (
         <>
-            <Container fluid>
+            <Container fluid style={{backgroundImage: 'url(/images/shiplap.jpg)'}}>
                 <h1 className='header-title'>My Projects</h1>
                 <div className='filter-link'>
                     <Filter className='filter' value={filterSetting} setFilter={setFilter} />
@@ -59,14 +54,14 @@ export const MyProjects = () => {
                 </div>
                 <Row>
                     <Col>
-                        <div className='card-wrap'>{filterProjects().map((project) => {
-                            return <Card className='card' key={`project--${project.id}`}>
-                                <CardHeader className='card-header'><CardImg className='default-card-img' variant='top' src='https://static.vecteezy.com/system/resources/previews/000/425/085/non_2x/house-icon-vector-illustration.jpg' alt='home icon default' />{project.pro ? 'Pro Project' : 'DIY Project'}</CardHeader>
+                        <div className='project-card-wrap'>{filterProjects().map((project) => {
+                            return <Card className='project-card' key={`project--${project.id}`}>
+                                <CardHeader className='project-card-header'><CardImg className='default-card-img' variant='top' src='/images/homeicon2.jpg' alt='home icon default' />{project.pro ? 'Pro Project' : 'DIY Project'}</CardHeader>
                                 <CardBody>
-                                    <CardTitle className='card-title'>{project.pro === false ? <Link to={`/diyProject/${project.id}`}>{project.title}</Link> : <Link to={`/proProject/${project.id}`}>{project.title}</Link>}</CardTitle>
-                                    <CardText className='card-description'>{project.description}</CardText>
+                                    <CardTitle className='project-card-title'>{project.pro === false ? <Link to={`/diyProject/${project.id}`}>{project.title}</Link> : <Link to={`/proProject/${project.id}`}>{project.title}</Link>}</CardTitle>
+                                    <CardText className='project-card-description'>{project.description}</CardText>
                                 </CardBody>
-                                <CardFooter className='card-footer'><BsFillXCircleFill color='red' style={{ cursor: "pointer" }} onClick={() => {
+                                <CardFooter className='project-card-footer' ><BsFillXCircleFill color='darkred' style={{ cursor: "pointer" }} onClick={() => {
                                     Delete(project.id)
                                 }}>Delete</BsFillXCircleFill></CardFooter>
                             </Card>

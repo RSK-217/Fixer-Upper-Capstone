@@ -26,8 +26,8 @@ export const AddToMyCon = ({estimate}) => {
         return fetch(`http://localhost:8088/contractors`, fetchOptions)
             .then(response => response.json())
             .then(() => {
-                alert('Added to My Contractors')
-                // <Alert color="info" toggle={function noRefCheck(){}}>Added to my contractors</Alert>
+                // alert('Added to My Contractors')
+                <Alert>Added to my contractors</Alert>
             })
     }
     return (

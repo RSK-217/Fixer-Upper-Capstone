@@ -5,11 +5,12 @@ import ProCost from '../finalCost/ProCost'
 import './ProjectForm.css'
 
 export const EditProject = () => {
-    const [project, setProject] = useState([])
+    const [project, setProject] = useState({})
     const [expense, setExpense] = useState([])
+    const [finalCost, setFinalCost] = useState(0)
     const history = useHistory()
     const { projectId } = useParams()
-
+    
     const cancelForm = () => {
         history.push(project.pro === false ? history.push(`/diyProject/${project.id}`) : history.push(`/proProject/${project.id}`))
     }
@@ -35,18 +36,17 @@ export const EditProject = () => {
     }
 
     const handleChange = (e) => {
-        if (project.pro === true) {
-            const copy = { ...project }
-            copy.finalCost = e.target.value
-            setProject(copy)
-        }
-        else {
-            const copy = { ...project }
-            copy.finalCost = e.target.value
-            console.log(!isNaN(+copy.finalCost))
-            setProject(copy)
-        }
+        const copy = { ...project }
+        copy.finalCost = e.target.value
+        setProject(copy)
     }
+
+    useEffect(
+        () => {
+            setFinalCost(project.pro === true ? project.finalCost : expenseTotal())
+        },
+        [project]
+    )
 
     useEffect(
         () => {
@@ -76,7 +76,7 @@ export const EditProject = () => {
             budget: parseInt(project.budget),
             pro: project.pro === false ? false : true,
             complete: project.complete,
-            finalCost: parseInt(project.finalCost)
+            finalCost: parseInt(finalCost)
 
         }
 
@@ -161,8 +161,8 @@ export const EditProject = () => {
                 </div>
             </fieldset>
             <fieldset>
-                {project.complete ? <ProCost onChange={handleChange} value={project.pro === true ? project.finalCost : expenseTotal()} /> : <></>}
-              
+                {project.complete ? <ProCost onChange={handleChange} value={finalCost} /> : <></>}
+
             </fieldset>
             <section className='form-button'>
                 <button className="btn btn-primary" onClick={updateProject}>
@@ -175,5 +175,5 @@ export const EditProject = () => {
         </form>
     )
 }
-
+// project.pro === true ? project.finalCost : expenseTotal()
 export default EditProject

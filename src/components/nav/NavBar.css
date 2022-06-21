@@ -18,6 +18,10 @@
     text-decoration: none;
 }
 
+.navbar-title {
+    padding-left: 115px;
+}
+
 .navbar-link:hover {
     color: blueviolet;
 }

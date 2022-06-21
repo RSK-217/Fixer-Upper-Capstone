@@ -5,7 +5,7 @@ import "./NavBar.css"
 export const NavBar = () => {
     return (
         <div>
-            <Nav className='navbar'>
+            <Nav className='navbar' style={{backgroundImage: 'url(/images/lightwood.jpg)'}}>
                 <NavItem className='navbar-item'>
                     <NavLink className='navbar-link'
                         active
@@ -26,6 +26,9 @@ export const NavBar = () => {
                         href="/contractors">
                         Contractors
                     </NavLink>
+                </NavItem>
+                <NavItem>
+                    <h1 className='navbar-title'>Fixer Upper</h1>
                 </NavItem>
                 <NavItem className='navbar-item' style={{position: 'absolute', right: 0}}>
                     <NavLink className='navbar-link'

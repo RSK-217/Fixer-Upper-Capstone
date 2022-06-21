@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import './ProjectForm.css'
 
+
 export const ProjectForm = () => {
     const [selected, setSelected] = useState({
         selectedOption: ''
@@ -43,11 +44,13 @@ export const ProjectForm = () => {
 
 
     return (
-        <form className="projectForm">
-            <h2 className="projectForm_title">Lets get started!</h2>
+        <form className='projectForm' style={{ backgroundImage: 'url(/images/Home7.jpg)' }}>
+            
+                <h2 className='projectForm-title'>Lets get started on your</h2>
+                <h1 className='projectForm-title-name'>Fixer Upper!</h1>
+            
             <fieldset>
-                <div className="form-group">
-                    <label>Title</label>
+                <div>
                     <input
                         onChange={
                             (e) => {
@@ -56,15 +59,14 @@ export const ProjectForm = () => {
                                 setProject(copy)
                             }}
                         required autoFocus
-                        type="text"
-                        className="form-control"
-                        placeholder="title"
+                        type='text'
+                        className='form-control'
+                        placeholder='project title'
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label className ='form-description'>Description</label>
+                <div>
                     <textarea
                         onChange={
                             (e) => {
@@ -73,15 +75,14 @@ export const ProjectForm = () => {
                                 setProject(copy)
                             }}
                         required autoFocus
-                        type="text"
-                        className="form-textarea"
-                        placeholder="description"
+                        type='text'
+                        className='form-textarea'
+                        placeholder='notes, details, etc.'
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label>Budget</label>
+                <div>
                     <input
                         onChange={
                             (e) => {
@@ -89,47 +90,47 @@ export const ProjectForm = () => {
                                 copy.budget = parseInt(e.target.value)
                                 setProject(copy)
                             }}
-                        required autoFocus 
-                        type="text" 
-                        className="form-control"
-                        placeholder="$"
+                        required autoFocus
+                        type='text'
+                        className='form-control'
+                        placeholder='$ budget'
                     />
                 </div>
             </fieldset>
             <section className='form-radio'>
-            <fieldset>
-                <div className="form-group">
-                    <input type="radio"
-                        onChange={(e) => {
-                            const copy = { ...project }
-                            copy.pro = e.target.checked
-                            setProject(copy)
-                            handleChange(e)
-                        }} 
-                        value='option1'
-                        checked={selected.selectedOption === 'option1'}
+                <fieldset>
+                    <div>
+                        <input type="radio"
+                            onChange={(e) => {
+                                const copy = { ...project }
+                                copy.pro = e.target.checked
+                                setProject(copy)
+                                handleChange(e)
+                            }}
+                            value='option1'
+                            checked={selected.selectedOption === 'option1'}
                         />
-                        <label>&nbsp;Hire a pro</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
-                    <input type="radio"
-                        onChange={(e) => {
-                            const copy = { ...project }
-                            const isChecked = e.target.checked
-                            copy.pro = !isChecked
-                            setProject(copy)
-                            handleChange(e)
-                        }} 
-                        value='option2'
-                        checked={selected.selectedOption === 'option2'}
+                        <label className='radio-label'>&nbsp;Hire a pro</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div>
+                        <input type="radio"
+                            onChange={(e) => {
+                                const copy = { ...project }
+                                const isChecked = e.target.checked
+                                copy.pro = !isChecked
+                                setProject(copy)
+                                handleChange(e)
+                            }}
+                            value='option2'
+                            checked={selected.selectedOption === 'option2'}
                         />
-                        <label>&nbsp;Do it yourself</label>
-                </div>
-            </fieldset>
+                        <label className='radio-label'>&nbsp;Do it yourself</label>
+                    </div>
+                </fieldset>
             </section>
-            <button className="btn btn-primary" onClick={saveProject}>
+            <button className='btn btn-primary' onClick={saveProject}>
                 Let's go!
             </button>
         </form>

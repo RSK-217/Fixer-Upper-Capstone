@@ -18,7 +18,7 @@
       "budget": 400,
       "pro": false,
       "complete": true,
-      "finalCost": 22,
+      "finalCost": 110,
       "id": 1
     },
     {
@@ -27,7 +27,7 @@
       "budget": 20000,
       "pro": true,
       "complete": true,
-      "finalCost": 19470,
+      "finalCost": 19471,
       "id": 2
     },
     {
@@ -36,7 +36,7 @@
       "budget": 7000,
       "pro": true,
       "complete": true,
-      "finalCost": 7001,
+      "finalCost": 7002,
       "id": 5
     },
     {
@@ -45,7 +45,7 @@
       "budget": 1000,
       "pro": false,
       "complete": true,
-      "finalCost": null,
+      "finalCost": 470,
       "id": 7
     },
     {
@@ -54,7 +54,7 @@
       "budget": 300,
       "pro": false,
       "complete": true,
-      "finalCost": null,
+      "finalCost": 120,
       "id": 8
     }
   ],
@@ -173,6 +173,12 @@
       "amount": 170,
       "projectId": 7,
       "id": 9
+    },
+    {
+      "type": "paint thinner",
+      "amount": 20,
+      "projectId": 1,
+      "id": 10
     }
   ]
 }
