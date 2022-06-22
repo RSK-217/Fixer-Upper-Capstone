@@ -50,7 +50,7 @@ export const MyProjects = () => {
                 <h1 className='header-title'>My Projects</h1>
                 <div className='filter-link'>
                     <Filter className='filter' value={filterSetting} setFilter={setFilter} />
-                    <Link className='new-project' to='/form'><BsFillPlusCircleFill></BsFillPlusCircleFill>   Start a new project</Link>
+                    <Link className='new-project' to='/form'><BsFillPlusCircleFill className='new-project-icon'></BsFillPlusCircleFill>   new project</Link>
                 </div>
                 <Row>
                     <Col>
@@ -58,10 +58,10 @@ export const MyProjects = () => {
                             return <Card className='project-card' key={`project--${project.id}`}>
                                 <CardHeader className='project-card-header'><CardImg className='default-card-img' variant='top' src='/images/homeicon2.jpg' alt='home icon default' />{project.pro ? 'Pro Project' : 'DIY Project'}</CardHeader>
                                 <CardBody>
-                                    <CardTitle className='project-card-title'>{project.pro === false ? <Link to={`/diyProject/${project.id}`}>{project.title}</Link> : <Link to={`/proProject/${project.id}`}>{project.title}</Link>}</CardTitle>
+                                    <CardTitle className='project-card-title'>{project.pro === false ? <Link className='title-link' to={`/diyProject/${project.id}`}>{project.title}</Link> : <Link className='title-link' to={`/proProject/${project.id}`}>{project.title}</Link>}</CardTitle>
                                     <CardText className='project-card-description'>{project.description}</CardText>
                                 </CardBody>
-                                <CardFooter className='project-card-footer' ><BsFillXCircleFill color='darkred' style={{ cursor: "pointer" }} onClick={() => {
+                                <CardFooter className='project-card-footer' ><BsFillXCircleFill className='footer-delete-icon' style={{ cursor: "pointer" }} onClick={() => {
                                     Delete(project.id)
                                 }}>Delete</BsFillXCircleFill></CardFooter>
                             </Card>

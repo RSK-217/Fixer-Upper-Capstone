@@ -41,11 +41,10 @@ export const AddContractor = () => {
     }
 
     return (
-        <form className="contractorForm">
+        <form className="contractorForm" style={{backgroundImage: 'url(/images/tile2.webp)'}}>
              <h2 className="addCon_title">Add contractor</h2>
             <fieldset>
                 <div className="form-group">
-                    <label>Name or company</label>
                     <input
                         onChange={
                             (e) => {
@@ -62,7 +61,6 @@ export const AddContractor = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Phone number</label>
                     <input
                         onChange={
                             (e) => {
@@ -79,7 +77,6 @@ export const AddContractor = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>email</label>
                     <input
                         onChange={
                             (e) => {
@@ -96,7 +93,6 @@ export const AddContractor = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Website</label>
                     <input
                         onChange={
                             (e) => {
@@ -112,10 +108,10 @@ export const AddContractor = () => {
                 </div>
             </fieldset>
             <section className='contractor-form-btn'>
-            <button className="btn btn-primary" onClick={saveContractor}>
+            <button className="con-btn" onClick={saveContractor}>
                 Save
             </button>&nbsp;
-            <button className="btn btn-primary" onClick={cancelForm}>
+            <button className="con-btn" onClick={cancelForm}>
                 Cancel
             </button>
             </section>

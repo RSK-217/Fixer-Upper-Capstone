@@ -131,7 +131,7 @@ export const ProjectForm = () => {
                 </fieldset>
             </section>
             <button className='btn btn-primary' onClick={saveProject}>
-                Let's go!
+                continue
             </button>
         </form>
     )

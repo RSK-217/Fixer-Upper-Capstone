@@ -93,11 +93,10 @@ export const EditProject = () => {
     }
 
     return (
-        <form className="EditForm">
+        <form className="EditForm" style={{backgroundImage: 'url(/images/shiplap.jpg)'}}>
             <h3 className="EditForm_title">Edit project</h3>
             <fieldset>
                 <div className="form-group">
-                    <label>Title</label>
                     <input
                         onChange={
                             (e) => {
@@ -114,7 +113,6 @@ export const EditProject = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Description</label>
                     <textarea
                         onChange={
                             (e) => {
@@ -131,7 +129,6 @@ export const EditProject = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label>Budget</label>
                     <input
                         onChange={
                             (e) => {
@@ -165,15 +162,15 @@ export const EditProject = () => {
 
             </fieldset>
             <section className='form-button'>
-                <button className="btn btn-primary" onClick={updateProject}>
+                <button className="edit-form-btn" onClick={updateProject}>
                     Save
                 </button>&nbsp;
-                <button className="btn btn-primary" onClick={cancelForm}>
+                <button className="edit-form-btn" onClick={cancelForm}>
                     Cancel
                 </button>
             </section>
         </form>
     )
 }
-// project.pro === true ? project.finalCost : expenseTotal()
+
 export default EditProject

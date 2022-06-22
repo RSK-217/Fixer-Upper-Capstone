@@ -25,8 +25,8 @@
 }
 
 .form-textarea {
-    width: 100%;
-    height: 6em;
+    width: 250px;
+    height: 120px;
     padding: 12px 12px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -65,15 +65,28 @@
 .btn-primary {
     margin-top: 1em;
     margin-bottom: 4em;
-    background-color: rgba(223, 182, 0, 0.945);
-    color: white;
-    border: none;
     border-radius: 10px;
+    border: 2px solid #091D34;
+    background-color: #FC7307;
+    color: #091D34;
 }
 
 .btn-primary:hover {
     background-color: rgb(0, 170, 0);
     color:white;
-    border: white solid 1px;
+    border: white solid 2px;
     border-radius: 10px;
 }
+
+.edit-form-btn {
+    margin-top: 1em;
+    margin-bottom: 4em;
+    border-radius: 10px;
+    border: 2px solid #091D34;
+    background-color: #FC7307;
+    color: #091D34;
+}
+
+.edit-form-btn:hover {
+    border: 2px solid #236AB9;
+} 

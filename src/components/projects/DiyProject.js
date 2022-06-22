@@ -59,27 +59,28 @@ const DiyProject = () => {
 
     return (
         <>
-            <header className='header'>
-                <img className='default-project-img' src='https://static.vecteezy.com/system/resources/previews/000/425/085/non_2x/house-icon-vector-illustration.jpg' alt='home icon default' />
-                <h1 className='title'>{project.title}</h1>
-            </header>
+            <article className='body' style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
+                <header className='header'>
+                    <img className='default-project-img' src='/images/homeicon2.jpg' alt='home icon' />
+                    <h1 className='title'>{project.title}</h1>
+                </header>
 
-            <section className='aside'>
-                <h4 className='project-type'>D.I.Y Project</h4>
-                <h1 className='complete'>{projectComplete()}</h1>
-                {budget()}{cost()}
-            </section>
+                <section className='aside'>
+                    <h4 className='project-type'>D.I.Y Project</h4>
+                    <h1 className='complete'>{projectComplete()}</h1>
+                    {budget()}{cost()}
+                </section>
 
-            <section className='details'>
-                <div className='details-header'>
-                    <h4 className='description-title'>Project notes</h4>
-                    <Link className='edit' to={`/diyProject/${projectId}/editProject`}><BsFillPencilFill color='orange'></BsFillPencilFill>&nbsp;&nbsp;Edit project</Link>
-                </div>
-                <p className='description'>{project.description}</p>
-            </section>
+                <section className='details'>
+                    <div className='details-header'>
+                        <h4 className='description-title'>Project notes</h4>
+                        <Link className='edit' to={`/diyProject/${projectId}/editProject`}><BsFillPencilFill className='edit-icon'></BsFillPencilFill>&nbsp;&nbsp;edit project</Link>
+                    </div>
+                    <p className='description'>{project.description}</p>
+                </section>
 
-            <Expenses />
-
+                <Expenses />
+            </article>
         </>
     )
 }

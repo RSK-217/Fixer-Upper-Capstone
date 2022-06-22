@@ -60,19 +60,19 @@ export const MyContractors = () => {
 
     return (
         <>
-            <Container fluid>
+            <Container fluid style={{ backgroundImage: 'url(/images/tile2.webp)' }}>
                 <h1 className='con-header-title'>My Contractors</h1>
                 <div className='con-filter-link'>
                     <ContractorFilter className='con-filter' value={filterSetting} setFilter={setFilter} />
-                    <Link className='new-contractor' to='/contractors/add'><BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
+                    <Link className='new-contractor' to='/contractors/add'><BsFillPlusCircleFill className='new-contractor-icon' style={{ cursor: "pointer" }} onClick={() => {
                         showForm()
-                    }}></BsFillPlusCircleFill>  Add a new contractor</Link>
+                    }}></BsFillPlusCircleFill>&nbsp;&nbsp;new contractor</Link>
                 </div>
                 <Row>
                     <Col>
                         <div className='contractor-wrap'>{filterContractors().map((contractor) => {
                             return <Card className='contractor' key={`contractor--${contractor.id}`}>
-                                <CardHeader> <CardImg className='con-img' variant='top' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVq3fPtbcHMZCAAETJoZ9zukfSSUgup298ZQ&usqp=CAU' alt='contractor default image'></CardImg></CardHeader>
+                                <CardHeader className='con-card-header'> <CardImg className='con-img' variant='top' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVq3fPtbcHMZCAAETJoZ9zukfSSUgup298ZQ&usqp=CAU' alt='contractor default image'></CardImg></CardHeader>
                                 <CardBody>
                                     <CardTitle className='con-title'><h3>{contractor.name} </h3></CardTitle>
                                     <CardText className='con-text'><b>phone</b><br />{contractor.phone}</CardText>
@@ -82,10 +82,10 @@ export const MyContractors = () => {
                                 </CardBody>
                                 <CardFooter className='edit-delete'>
                                     <Link to={`/contractors/${contractor.id}/edit`}>
-                                        <BsFillPencilFill color='orange' style={{ cursor: "pointer" }} onClick={() => {
+                                        <BsFillPencilFill className='con-footer-edit' style={{ cursor: "pointer" }} onClick={() => {
                                             editForm()
                                         }}></BsFillPencilFill></Link>&nbsp;&nbsp;
-                                    <BsFillXCircleFill className='delete' color='red' style={{ cursor: "pointer" }} onClick={() => {
+                                    <BsFillXCircleFill className='con-footer-delete' style={{ cursor: "pointer" }} onClick={() => {
                                         Delete(contractor.id)
                                     }}></BsFillXCircleFill>
                                 </CardFooter>

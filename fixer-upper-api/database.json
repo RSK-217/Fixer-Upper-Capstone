@@ -56,6 +56,14 @@
       "complete": true,
       "finalCost": 120,
       "id": 8
+    },
+    {
+      "title": "power wash the carport",
+      "description": "include front walkway and steps.",
+      "budget": 100,
+      "pro": false,
+      "complete": false,
+      "id": 9
     }
   ],
   "contractors": [
@@ -179,6 +187,12 @@
       "amount": 20,
       "projectId": 1,
       "id": 10
+    },
+    {
+      "type": "cleaning solution",
+      "amount": 20,
+      "projectId": 9,
+      "id": 11
     }
   ]
 }

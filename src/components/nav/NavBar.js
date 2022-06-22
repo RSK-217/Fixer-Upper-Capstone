@@ -5,7 +5,7 @@ import "./NavBar.css"
 export const NavBar = () => {
     return (
         <div>
-            <Nav className='navbar' style={{backgroundImage: 'url(/images/lightwood.jpg)'}}>
+            <Nav className='navbar'>
                 <NavItem className='navbar-item'>
                     <NavLink className='navbar-link'
                         active

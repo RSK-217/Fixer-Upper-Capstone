@@ -58,7 +58,7 @@ export const Expenses = () => {
                 <div className='expense-header'>
                     <h4 className='expense-title'>Expenses</h4>
                     <Link to={`/diyProject/${projectId}/add`} className='add-expense'>
-                        <BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
+                        <BsFillPlusCircleFill className='expense-icon' style={{ cursor: "pointer" }} onClick={() => {
                             showForm()
                         }}></BsFillPlusCircleFill>  expense
                     </Link>

@@ -40,7 +40,7 @@ export const AddExpense = () => {
     }
 
     return (
-        <form className="expenseForm">
+        <form className="expenseForm" style={{backgroundImage: 'url(/images/shiplap.jpg)'}}>
             <h2 className="addExpense_title">Add an expense</h2>
             <fieldset>
                 <div className="form-group">
@@ -77,10 +77,10 @@ export const AddExpense = () => {
                 </div>
             </fieldset>
             <section className='expense-form-btn'>
-            <button className="btn btn-primary" onClick={saveExpense}>
+            <button className="expense-btn" onClick={saveExpense}>
                 Save
             </button>&nbsp;
-            <button className="btn btn-primary" onClick={cancelForm}>
+            <button className="expense-btn" onClick={cancelForm}>
                 Cancel
             </button>
             </section>

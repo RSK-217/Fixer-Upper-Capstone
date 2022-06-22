@@ -1,5 +1,5 @@
 .estimateForm {
-    margin-top: 4em;
+    padding-top: 4em;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -13,9 +13,16 @@
 .estimate-form-btn, .editEst-form-btn {
     display: flex;
     gap: 15px;
+    padding-bottom: 8em;
 }
 
-.btn-primary {
-    margin-top: 1em;
-    margin-bottom: 4em;
+.estimate-btn {
+    border-radius: 10px;
+    border: 2px solid #091D34;
+    background-color: #FC7307;
+    color: #091D34;
 }
+
+.estimate-btn:hover {
+    border: 2px solid #236AB9;
+} 

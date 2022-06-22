@@ -11,16 +11,31 @@
 
 a {
     text-decoration: none;
+    color: #236AB9;
+
 }
 
 a:hover {
-    color:blueviolet;
+    color: #FC7307;
 }
 
 .new-contractor {
     align-self: flex-end;
     margin-right: 18px;
     margin-bottom: 7px;
+    color: #236AB9;
+}
+
+.new-contractor:hover {
+    color: #FC7307;
+}
+
+.new-contractor-icon {
+    color: #236AB9;
+}
+
+.con-card-header {
+    background-color:#091D34;
 }
 
 .contractor-wrap {
@@ -35,6 +50,11 @@ a:hover {
     margin: .5em;
     padding: 10px;
     text-align: center;
+    background-color: #F7E3D4;
+}
+
+.contractor:hover {
+    box-shadow: 10px 10px 5px #7f98b6;
 }
 
 .con-img {
@@ -42,7 +62,6 @@ a:hover {
     justify-content: flex-start;
     width: 5em;
     height: 5em;
-    border: black 1px solid;
 }
 
 .con-title {
@@ -60,10 +79,14 @@ a:hover {
 .edit-delete {
     text-align: start;
     padding-left: 12px;
-
+    background-color:#091D34;
 }
 
-.delete {
-    margin-top: 6px;
+.con-footer-edit {
+    color: #FC7307;
+}
+
+.con-footer-delete {
     margin-left: 4px;
+    color: #FC7307;
 }

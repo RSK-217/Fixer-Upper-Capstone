@@ -53,7 +53,7 @@ export const Estimates = () => {
         <div className='estimate-header'>
             <h4 className='estimate-title'>Estimates</h4>
             <Link to={`/proProject/${projectId}/add`} className='add-estimate'>
-                <BsFillPlusCircleFill style={{ cursor: "pointer" }} onClick={() => {
+                <BsFillPlusCircleFill className='estimate-icon' style={{ cursor: "pointer" }} onClick={() => {
                     showForm()
                 }}></BsFillPlusCircleFill>  estimate
             </Link>
@@ -61,7 +61,7 @@ export const Estimates = () => {
             <ul>
             {estimates.map(estimate => {
                 return <li key={`estimate--${estimate.id}`} className='icon-link'>${estimate.estimate.toLocaleString()} -&nbsp;
-                    <Link to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
+                    <Link className='estimate-contractor' to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
                     {estimate.phone}&nbsp;&nbsp;
                     <AddToMyCon estimate={estimate} />&nbsp;&nbsp;
                     <Link to={`/proProject/${estimate.id}/edit`}>

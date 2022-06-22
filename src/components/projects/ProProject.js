@@ -39,8 +39,9 @@ export const ProProject = () => {
 
     return (
         <>
+            <article className='body' style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>       
             <header className='header'>
-                <img className='default-project-img' src='https://static.vecteezy.com/system/resources/previews/000/425/085/non_2x/house-icon-vector-illustration.jpg' alt='home icon default' />
+            <img className='default-project-img' src='/images/homeicon2.jpg' alt='home icon' />
                 <h2 className='title'>{project.title}</h2>
             </header>
 
@@ -53,12 +54,13 @@ export const ProProject = () => {
             <section className='details'>
                 <div className='details-header'>
                     <h4 className='description-title'>Project notes</h4>
-                    <Link to={`/proProject/${projectId}/editProject`}><BsFillPencilFill color='orange'></BsFillPencilFill>&nbsp;&nbsp;Edit project</Link>
+                    <Link className='edit' to={`/proProject/${projectId}/editProject`}><BsFillPencilFill className='edit-icon'></BsFillPencilFill>&nbsp;&nbsp;Edit project</Link>
                 </div>
                 <p className='description'>{project.description}</p>
             </section>
 
             <Estimates />
+            </article> 
         </>
     )
 }

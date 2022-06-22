@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(215, 215, 215, 0.792);
+    background-color: #091D34;
 }
 
 .navbar-item {
@@ -16,12 +16,20 @@
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
+    
 }
 
 .navbar-title {
+    font-size: 3em;
+    text-decoration-line: underline;
     padding-left: 115px;
+    color:#FC7307;
+}
+
+.navbar-link {
+    color: #FC7307;
 }
 
 .navbar-link:hover {
-    color: blueviolet;
+    color: #236AB9;
 }

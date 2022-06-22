@@ -8,10 +8,22 @@
   margin: 0 40px 0 40px;
 }
 
+.new-project {
+  color: #236AB9;
+}
+
+.new-project:hover {
+  color: #FC7307;
+}
+
+.new-project-icon {
+  color: #236AB9;
+}
+
+
 .default-card-img {
   width: 5em;
   height: 5em;
-  border: black 1px solid;
 }
 
 .project-card {
@@ -19,18 +31,31 @@
   padding: 10px;
   text-align: center;
   height: 20em;
-  
+  background-color: #F7E3D4;
+}
+
+.project-card:hover {
+  box-shadow: 10px 10px 5px #7f98b6;
 }
 
 .project-card-header {
   display: flex;
   justify-content: space-between;
-  background-color:rgb(227, 242, 255);
+  color: #FC7307;
+  background-color:#091D34;
 }
 
 .project-card-title {
   font-size: x-large;
   text-align: start;
+}
+
+.title-link {
+  color: #236AB9;
+}
+
+.title-link:hover {
+  color: #FC7307;
 }
 
 .project-card-wrap {
@@ -48,5 +73,10 @@
 
 .project-card-footer {
   display: flex;
-  background-color:rgb(227, 242, 255);
+  background-color:#091D34;
+  
+}
+
+.footer-delete-icon {
+  color: #FC7307;
 }
