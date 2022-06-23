@@ -135,7 +135,7 @@ export const ProjectForm = () => {
                 </fieldset>
             </section>
             <button className='btn btn-primary' onClick={saveProject}>
-                continue
+                save
             </button>
             <Link className='skip-project' to='/projects'>
                 Skip to my projects

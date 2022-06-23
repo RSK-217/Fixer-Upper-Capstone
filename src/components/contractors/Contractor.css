@@ -23,7 +23,7 @@ a:hover {
     align-self: flex-end;
     margin-right: 18px;
     margin-bottom: 7px;
-    color: #236AB9;
+    color: #091D34;
 }
 
 .new-contractor:hover {
@@ -44,6 +44,7 @@ a:hover {
     grid-template-rows: auto;
     padding: 10px;
     justify-content: center;
+    margin-bottom: 55px;
 }
 
 .contractor {
@@ -62,6 +63,7 @@ a:hover {
     justify-content: flex-start;
     width: 5em;
     height: 5em;
+    border: 2px solid #FC7307;
 }
 
 .con-title {
