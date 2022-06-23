@@ -31,7 +31,7 @@
   padding: 10px;
   text-align: center;
   height: 20em;
-  background-color:  antiquewhite;
+  background-color: antiquewhite;
 }
 
 .project-card:hover {
@@ -42,7 +42,7 @@
   display: flex;
   justify-content: space-between;
   color: #FC7307;
-  background-color:#091D34;
+  background-color: #091D34;
 }
 
 .project-card-title {
@@ -74,8 +74,8 @@
 
 .project-card-footer {
   display: flex;
-  background-color:#091D34;
-  
+  background-color: #091D34;
+
 }
 
 .footer-delete-icon {

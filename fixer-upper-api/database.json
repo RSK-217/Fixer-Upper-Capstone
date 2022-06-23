@@ -17,7 +17,7 @@
       "description": "Hallway, living room, spare room need to be painted. Need paint, primer, rollers and paint trays.",
       "budget": 400,
       "pro": false,
-      "complete": true,
+      "complete": false,
       "finalCost": 110,
       "id": 1
     },
@@ -112,6 +112,13 @@
       "estimateId": 1,
       "projectId": 2,
       "id": 9
+    },
+    {
+      "name": "Big Shovel",
+      "phone": "615-444-3322",
+      "email": "mike@bigshovel.com",
+      "website": "www.bigshovel.com",
+      "id": 10
     }
   ],
   "estimates": [
@@ -149,6 +156,13 @@
       "contractor": "The building Co",
       "phone": "615-333-2222",
       "id": 5
+    },
+    {
+      "estimate": 15000,
+      "projectId": 2,
+      "contractor": "Driveways etc.",
+      "phone": "615-778-6654",
+      "id": 6
     }
   ],
   "expenses": [
@@ -193,6 +207,12 @@
       "amount": 20,
       "projectId": 9,
       "id": 11
+    },
+    {
+      "type": "rollers and trays",
+      "amount": 44,
+      "projectId": 1,
+      "id": 12
     }
   ]
 }

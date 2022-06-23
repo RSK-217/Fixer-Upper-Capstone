@@ -66,16 +66,16 @@ export const Expenses = () => {
                 <ul>
                     {expenses.map(expense => {
                         return <li key={`expense--${expense.id}`} className='icon-link'>{expense.type}: ${expense.amount.toLocaleString()}
-                                <Link to={`/diyProject/${expense.id}/edit`}>
-                                    <BsFillPencilFill className='expense-edit' style={{ cursor: "pointer" }} onClick={() => {
-                                        editForm()
-                                    }}></BsFillPencilFill>
-                                </Link>
-                                <BsFillXCircleFill className='expense-delete' style={{ cursor: "pointer" }} onClick={() => {
-                                    Delete(expense.id)
-                                }}></BsFillXCircleFill>
-                            </li>
-                        
+                            <Link to={`/diyProject/${expense.id}/edit`}>
+                                <BsFillPencilFill className='expense-edit' style={{ cursor: "pointer" }} onClick={() => {
+                                    editForm()
+                                }}></BsFillPencilFill>
+                            </Link>
+                            <BsFillXCircleFill className='expense-delete' style={{ cursor: "pointer" }} onClick={() => {
+                                Delete(expense.id)
+                            }}></BsFillXCircleFill>
+                        </li>
+
                     }
                     )
                     }

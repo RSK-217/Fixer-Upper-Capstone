@@ -30,7 +30,7 @@ export const NavBar = () => {
                 <NavItem>
                     <h1 className='navbar-title'>Fixer Upper</h1>
                 </NavItem>
-                <NavItem className='navbar-item' style={{position: 'absolute', right: 0}}>
+                <NavItem className='navbar-item' style={{ position: 'absolute', right: 0 }}>
                     <NavLink className='navbar-link'
                         active
                         href="/login"

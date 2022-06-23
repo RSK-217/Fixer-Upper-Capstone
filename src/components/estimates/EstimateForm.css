@@ -5,12 +5,14 @@
     flex-direction: column;
 }
 
-.addEstimate_title, .editEstimate_title {
+.addEstimate_title,
+.editEstimate_title {
     font-size: 3em;
     margin-bottom: .5em;
 }
 
-.estimate-form-btn, .editEst-form-btn {
+.estimate-form-btn,
+.editEst-form-btn {
     display: flex;
     gap: 15px;
     padding-bottom: 8em;
@@ -25,4 +27,4 @@
 
 .estimate-btn:hover {
     border: 2px solid #236AB9;
-} 
+}

@@ -46,7 +46,7 @@ export const MyProjects = () => {
 
     return (
         <>
-            <Container fluid style={{backgroundImage: 'url(/images/shiplap.jpg)'}}>
+            <Container fluid style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
                 <h1 className='header-title'>My Projects</h1>
                 <div className='filter-link'>
                     <Filter className='filter' value={filterSetting} setFilter={setFilter} />

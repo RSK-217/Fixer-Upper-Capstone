@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ContractorFilter = ({value, setFilter}) => {
+export const ContractorFilter = ({ value, setFilter }) => {
     const handleChange = (e) => {
         setFilter(e.target.value)
     }

@@ -43,88 +43,87 @@ export const EditContractor = () => {
                 history.push(`/contractors`)
             })
     }
-        
 
     return (
         <form className="contractorForm">
             <h2 className="editCon_title">Edit contractor</h2>
-        <fieldset>
-            <div className="form-group">
-                <label>Name or company</label>
-                <input
-                    onChange={
-                        (e) => {
-                            const copy = { ...contractor }
-                            copy.name = e.target.value
-                            setContractor(copy)
-                        }}
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    value={contractor.name || ''}
-                />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>Phone number</label>
-                <input
-                    onChange={
-                        (e) => {
-                            const copy = { ...contractor }
-                            copy.phone = e.target.value
-                            setContractor(copy)
-                        }}
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    value={contractor.phone || ''}
-                />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>email</label>
-                <input
-                    onChange={
-                        (e) => {
-                            const copy = { ...contractor }
-                            copy.email = e.target.value
-                            setContractor(copy)
-                        }}
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    value={contractor.email || ''}
-                />
-            </div>
-        </fieldset>
-        <fieldset>
-            <div className="form-group">
-                <label>Website</label>
-                <input
-                    onChange={
-                        (e) => {
-                            const copy = { ...contractor }
-                            copy.website = e.target.value
-                            setContractor(copy)
-                        }}
-                    required autoFocus
-                    type="text"
-                    className="form-control"
-                    value={contractor.website || ''}
-                />
-            </div>
-        </fieldset>
-        <section className='editCon-form-btn'>
-        <button className="btn btn-primary" onClick={updateContractor}>
-            Save
-        </button>&nbsp;
-        <button className="btn btn-primary" onClick={cancelForm}>
-            Cancel
-        </button>
-        </section>
-    </form>
+            <fieldset>
+                <div className="form-group">
+                    <label>Name or company</label>
+                    <input
+                        onChange={
+                            (e) => {
+                                const copy = { ...contractor }
+                                copy.name = e.target.value
+                                setContractor(copy)
+                            }}
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        value={contractor.name || ''}
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label>Phone number</label>
+                    <input
+                        onChange={
+                            (e) => {
+                                const copy = { ...contractor }
+                                copy.phone = e.target.value
+                                setContractor(copy)
+                            }}
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        value={contractor.phone || ''}
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label>email</label>
+                    <input
+                        onChange={
+                            (e) => {
+                                const copy = { ...contractor }
+                                copy.email = e.target.value
+                                setContractor(copy)
+                            }}
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        value={contractor.email || ''}
+                    />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label>Website</label>
+                    <input
+                        onChange={
+                            (e) => {
+                                const copy = { ...contractor }
+                                copy.website = e.target.value
+                                setContractor(copy)
+                            }}
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        value={contractor.website || ''}
+                    />
+                </div>
+            </fieldset>
+            <section className='editCon-form-btn'>
+                <button className="btn btn-primary" onClick={updateContractor}>
+                    Save
+                </button>&nbsp;
+                <button className="btn btn-primary" onClick={cancelForm}>
+                    Cancel
+                </button>
+            </section>
+        </form>
     )
 }
 

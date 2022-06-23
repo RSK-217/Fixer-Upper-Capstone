@@ -39,28 +39,28 @@ export const ProProject = () => {
 
     return (
         <>
-            <article className='body' style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>       
-            <header className='header'>
-            <img className='default-project-img' src='/images/homeicon2.jpg' alt='home icon' />
-                <h2 className='title'>{project.title}</h2>
-            </header>
+            <article className='body' style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
+                <header className='header'>
+                    <img className='default-project-img' src='/images/homeicon2.jpg' alt='home icon' />
+                    <h2 className='title'>{project.title}</h2>
+                </header>
 
-            <section className='aside'>
-                <h4 className='project-type'>Pro Project</h4>
-                <h1 className='complete'>{projectComplete()}</h1>
-                {budget()}{showFinalCost()}
-            </section>
+                <section className='aside'>
+                    <h4 className='project-type'>Pro Project</h4>
+                    <h1 className='complete'>{projectComplete()}</h1>
+                    {budget()}{showFinalCost()}
+                </section>
 
-            <section className='details'>
-                <div className='details-header'>
-                    <h4 className='description-title'>Project notes</h4>
-                    <Link className='edit' to={`/proProject/${projectId}/editProject`}><BsFillPencilFill className='edit-icon'></BsFillPencilFill>&nbsp;&nbsp;Edit project</Link>
-                </div>
-                <p className='description'>{project.description}</p>
-            </section>
+                <section className='details'>
+                    <div className='details-header'>
+                        <h4 className='description-title'>Project notes</h4>
+                        <Link className='edit' to={`/proProject/${projectId}/editProject`}><BsFillPencilFill className='edit-icon'></BsFillPencilFill>&nbsp;&nbsp;Edit project</Link>
+                    </div>
+                    <p className='description'>{project.description}</p>
+                </section>
 
-            <Estimates />
-            </article> 
+                <Estimates />
+            </article>
         </>
     )
 }

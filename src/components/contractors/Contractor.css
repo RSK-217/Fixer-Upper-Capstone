@@ -35,7 +35,7 @@ a:hover {
 }
 
 .con-card-header {
-    background-color:#091D34;
+    background-color: #091D34;
 }
 
 .contractor-wrap {
@@ -51,7 +51,7 @@ a:hover {
     margin: .5em;
     padding: 10px;
     text-align: center;
-    background-color:  antiquewhite;
+    background-color: antiquewhite;
 }
 
 .contractor:hover {
@@ -81,7 +81,7 @@ a:hover {
 .edit-delete {
     text-align: start;
     padding-left: 12px;
-    background-color:#091D34;
+    background-color: #091D34;
 }
 
 .con-footer-edit {

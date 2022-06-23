@@ -5,12 +5,14 @@
     flex-direction: column;
 }
 
-.addExpense_title, .editExpense_title {
+.addExpense_title,
+.editExpense_title {
     font-size: 3em;
     padding-bottom: .5em;
 }
 
-.expense-form-btn, .editEx-form-btn {
+.expense-form-btn,
+.editEx-form-btn {
     display: flex;
     gap: 15px;
     padding-bottom: 8em;
@@ -25,4 +27,4 @@
 
 .expense-btn:hover {
     border: 2px solid #236AB9;
-} 
+}

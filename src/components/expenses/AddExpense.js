@@ -3,15 +3,11 @@ import { useHistory, useParams } from 'react-router-dom'
 import './ExpenseForm.css'
 
 export const AddExpense = () => {
-    const [expense, setExpense] = useState({
-        type: '',
-        amount: 1,
-        projectId: 1
-    })
+    const [expense, setExpense] = useState({})
 
     const history = useHistory()
     const { projectId } = useParams()
-    
+
     const cancelForm = () => {
         history.push(`/diyProject/${projectId}`)
     }
@@ -40,7 +36,7 @@ export const AddExpense = () => {
     }
 
     return (
-        <form className="expenseForm" style={{backgroundImage: 'url(/images/shiplap.jpg)'}}>
+        <form className="expenseForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
             <h2 className="addExpense_title">Add an expense</h2>
             <fieldset>
                 <div className="form-group">
@@ -77,12 +73,12 @@ export const AddExpense = () => {
                 </div>
             </fieldset>
             <section className='expense-form-btn'>
-            <button className="expense-btn" onClick={saveExpense}>
-                Save
-            </button>&nbsp;
-            <button className="expense-btn" onClick={cancelForm}>
-                Cancel
-            </button>
+                <button className="expense-btn" onClick={saveExpense}>
+                    Save
+                </button>&nbsp;
+                <button className="expense-btn" onClick={cancelForm}>
+                    Cancel
+                </button>
             </section>
         </form>
     )

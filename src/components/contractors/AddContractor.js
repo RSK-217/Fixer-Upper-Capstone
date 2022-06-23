@@ -3,12 +3,7 @@ import { useHistory } from 'react-router-dom'
 import './ContractorForm.css'
 
 export const AddContractor = () => {
-    const [contractor, setContractor] = useState({
-        name: '',
-        phone: '',
-        email: '',
-        website: ''
-    })
+    const [contractor, setContractor] = useState({})
 
     const history = useHistory()
 

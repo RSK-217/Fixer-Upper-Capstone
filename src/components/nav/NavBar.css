@@ -16,14 +16,13 @@
     text-align: left;
     padding: 14px 16px;
     text-decoration: none;
-    
 }
 
 .navbar-title {
     font-size: 3em;
     text-decoration-line: underline;
     padding-left: 115px;
-    color:#FC7307;
+    color: #FC7307;
 }
 
 .navbar-link {

@@ -98,12 +98,12 @@ export const EditEstimate = () => {
                 </div>
             </fieldset>
             <section className='editEst-form-btn'>
-            <button className="btn btn-primary" onClick={updateEstimate}>
-                Save
-            </button>&nbsp;
-            <button className="btn btn-primary" onClick={cancelForm}>
-                Cancel
-            </button>
+                <button className="btn btn-primary" onClick={updateEstimate}>
+                    Save
+                </button>&nbsp;
+                <button className="btn btn-primary" onClick={cancelForm}>
+                    Cancel
+                </button>
             </section>
         </form>
     )

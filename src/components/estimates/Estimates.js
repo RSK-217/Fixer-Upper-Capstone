@@ -49,34 +49,34 @@ export const Estimates = () => {
 
     return (
         <>
-        <section className='estimate-section'>
-        <div className='estimate-header'>
-            <h4 className='estimate-title'>Estimates</h4>
-            <Link to={`/proProject/${projectId}/add`} className='add-estimate'>
-                <BsFillPlusCircleFill className='estimate-icon' style={{ cursor: "pointer" }} onClick={() => {
-                    showForm()
-                }}></BsFillPlusCircleFill>  estimate
-            </Link>
-            </div>
-            <ul>
-            {estimates.map(estimate => {
-                return <li key={`estimate--${estimate.id}`} className='icon-link'>${estimate.estimate.toLocaleString()} -&nbsp;
-                    <Link className='estimate-contractor' to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
-                    {estimate.phone}&nbsp;&nbsp;
-                    <AddToMyCon estimate={estimate} />&nbsp;&nbsp;
-                    <Link to={`/proProject/${estimate.id}/edit`}>
-                        <BsFillPencilFill className='estimate-edit' style={{ cursor: "pointer" }} onClick={() => {
+            <section className='estimate-section'>
+                <div className='estimate-header'>
+                    <h4 className='estimate-title'>Estimates</h4>
+                    <Link to={`/proProject/${projectId}/add`} className='add-estimate'>
+                        <BsFillPlusCircleFill className='estimate-icon' style={{ cursor: "pointer" }} onClick={() => {
                             showForm()
-                        }}></BsFillPencilFill>
-                    </Link>&nbsp;&nbsp;
-                    <BsFillXCircleFill className='estimate-delete' style={{ cursor: "pointer" }} onClick={() => {
-                        Delete(estimate.id)
-                    }}></BsFillXCircleFill>
-                </li>
-                
-                }
-            )
-            }</ul>
+                        }}></BsFillPlusCircleFill>  estimate
+                    </Link>
+                </div>
+                <ul>
+                    {estimates.map(estimate => {
+                        return <li key={`estimate--${estimate.id}`} className='icon-link'>${estimate.estimate.toLocaleString()} -&nbsp;
+                            <Link className='estimate-contractor' to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
+                            {estimate.phone}&nbsp;&nbsp;
+                            <AddToMyCon estimate={estimate} />&nbsp;&nbsp;
+                            <Link to={`/proProject/${estimate.id}/edit`}>
+                                <BsFillPencilFill className='estimate-edit' style={{ cursor: "pointer" }} onClick={() => {
+                                    showForm()
+                                }}></BsFillPencilFill>
+                            </Link>&nbsp;&nbsp;
+                            <BsFillXCircleFill className='estimate-delete' style={{ cursor: "pointer" }} onClick={() => {
+                                Delete(estimate.id)
+                            }}></BsFillXCircleFill>
+                        </li>
+
+                    }
+                    )
+                    }</ul>
             </section>
         </>
     )

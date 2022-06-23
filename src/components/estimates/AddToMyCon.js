@@ -2,10 +2,10 @@ import React from 'react'
 import { BsFillPlusCircleFill } from 'react-icons/bs'
 import { Alert } from 'reactstrap'
 
-export const AddToMyCon = ({estimate}) => {
-    
-   const saveContractor = () => {
-        
+export const AddToMyCon = ({ estimate }) => {
+
+    const saveContractor = () => {
+
         const newContractor = {
             name: estimate.contractor,
             phone: estimate.phone,
@@ -31,7 +31,7 @@ export const AddToMyCon = ({estimate}) => {
             })
     }
     return (
-        <BsFillPlusCircleFill className='add-my-contractor' style={{ cursor: "pointer" }} onClick={() => {saveContractor()}}></BsFillPlusCircleFill>
+        <BsFillPlusCircleFill className='add-my-contractor' style={{ cursor: "pointer" }} onClick={() => { saveContractor() }}></BsFillPlusCircleFill>
     )
 }
 

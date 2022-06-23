@@ -3,16 +3,11 @@ import { useHistory, useParams } from 'react-router-dom'
 import './EstimateForm.css'
 
 export const AddEstimate = () => {
-    const [estimate, setEstimate] = useState({
-        estimate: 1,
-        projectId: 1,
-        contractor: '',
-        contact: ''
-    })
+    const [estimate, setEstimate] = useState({})
 
     const history = useHistory()
     const { projectId } = useParams()
-    
+
     const cancelForm = () => {
         history.push(`/proProject/${projectId}`)
     }
@@ -42,7 +37,7 @@ export const AddEstimate = () => {
     }
 
     return (
-        <form className="estimateForm" style={{backgroundImage: 'url(/images/shiplap.jpg)'}}>
+        <form className="estimateForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
             <h2 className="addEstimate_title">Add an estimate</h2>
             <fieldset>
                 <div className="form-group">
@@ -96,12 +91,12 @@ export const AddEstimate = () => {
                 </div>
             </fieldset>
             <section className='estimate-form-btn'>
-            <button className="estimate-btn" onClick={saveEstimate}>
-                Save
-            </button>&nbsp;
-            <button className="estimate-btn" onClick={cancelForm}>
-                Cancel
-            </button>
+                <button className="estimate-btn" onClick={saveEstimate}>
+                    Save
+                </button>&nbsp;
+                <button className="estimate-btn" onClick={cancelForm}>
+                    Cancel
+                </button>
             </section>
         </form>
     )

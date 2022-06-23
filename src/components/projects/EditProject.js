@@ -10,7 +10,7 @@ export const EditProject = () => {
     const [finalCost, setFinalCost] = useState(0)
     const history = useHistory()
     const { projectId } = useParams()
-    
+
     const cancelForm = () => {
         history.push(project.pro === false ? history.push(`/diyProject/${project.id}`) : history.push(`/proProject/${project.id}`))
     }
@@ -93,7 +93,7 @@ export const EditProject = () => {
     }
 
     return (
-        <form className="EditForm" style={{backgroundImage: 'url(/images/shiplap.jpg)'}}>
+        <form className="EditForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
             <h3 className="EditForm_title">Edit project</h3>
             <fieldset>
                 <div className="form-group">
