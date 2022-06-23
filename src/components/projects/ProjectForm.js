@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import './ProjectForm.css'
 
 
@@ -16,6 +16,10 @@ export const ProjectForm = () => {
     })
 
     const history = useHistory()
+
+    const myProjects = () => {
+        history.push(`/projects`)
+    }
 
     const handleChange = (changeEvent) => {
         setSelected({
@@ -45,10 +49,10 @@ export const ProjectForm = () => {
 
     return (
         <form className='projectForm' style={{ backgroundImage: 'url(/images/Home7.jpg)' }}>
-            
-                <h2 className='projectForm-title'>Lets get started on your</h2>
-                <h1 className='projectForm-title-name'>Fixer Upper!</h1>
-            
+
+            <h2 className='projectForm-title'>Lets get started on your</h2>
+            <h1 className='projectForm-title-name'>Fixer Upper!</h1>
+
             <fieldset>
                 <div>
                     <input
@@ -110,7 +114,7 @@ export const ProjectForm = () => {
                             value='option1'
                             checked={selected.selectedOption === 'option1'}
                         />
-                        <label className='radio-label'>&nbsp;Hire a pro</label>
+                        <label className='radio-label'>Hire a pro</label>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -126,13 +130,16 @@ export const ProjectForm = () => {
                             value='option2'
                             checked={selected.selectedOption === 'option2'}
                         />
-                        <label className='radio-label'>&nbsp;Do it yourself</label>
+                        <label className='radio-label'>Do it yourself</label>
                     </div>
                 </fieldset>
             </section>
             <button className='btn btn-primary' onClick={saveProject}>
                 continue
             </button>
+            <Link className='skip-project' to='/projects'>
+                Skip to my projects
+            </Link>
         </form>
     )
 
