@@ -44,7 +44,7 @@ fieldset {
 .container--login {
     text-align: center;
     padding-bottom: 150px;
-    background-color: antiquewhite;
+    background-color: whitesmoke;
 }
 
 .form--login {
@@ -73,6 +73,9 @@ fieldset {
 
 .login-title {
     font-size: 5em;
+    font-weight: 500;
+    font-family: 'Cabin Sketch', cursive;
+    text-decoration: underline;
     padding-bottom: 30px;
     color: #FC7307;
 }

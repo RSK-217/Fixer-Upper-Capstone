@@ -9,14 +9,16 @@
 
 .projectForm-title {
     font-size: 3em;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
+    font-family: 'Cabin Sketch', cursive;
     text-align: center;
 }
 
 .projectForm-title-name {
     font-size: 5em;
-    margin-bottom: .5em;
+    margin-bottom: .3em;
     text-align: center;
+    font-family: 'Cabin Sketch', cursive;
 }
 
 

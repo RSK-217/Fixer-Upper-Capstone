@@ -1,5 +1,7 @@
 .header-title {
   margin-left: 17px;
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 550;
 }
 
 .filter-link {
@@ -51,7 +53,10 @@
 }
 
 .title-link {
-  color: #236AB9;
+  color:#091D34;
+  font-weight: 500;
+  font-family: 'Cabin Sketch', cursive;
+  text-decoration: underline;
 }
 
 .title-link:hover {

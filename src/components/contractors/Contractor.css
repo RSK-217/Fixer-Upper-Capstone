@@ -1,5 +1,8 @@
 .con-header-title {
     margin-left: 17px;
+    font-weight: 500;
+    font-family: 'Cabin Sketch', cursive;
+    margin-bottom: 1px;
 }
 
 .con-filter-link {
@@ -70,6 +73,10 @@ a:hover {
     font-size: x-large;
     text-align: start;
     margin-bottom: 15px;
+    font-weight: 500;
+    font-family: 'Cabin Sketch', cursive;
+    text-decoration: underline;
+    color: #091D34;
 }
 
 .con-text {

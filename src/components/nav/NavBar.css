@@ -20,7 +20,9 @@
 
 .navbar-title {
     font-size: 3em;
-    text-decoration-line: underline;
+    font-weight: 500;
+    font-family: 'Cabin Sketch', cursive;
+    text-decoration: underline;
     padding-left: 115px;
     color: #FC7307;
 }
