@@ -56,14 +56,17 @@ export const MyProjects = () => {
                     <Col>
                         <div className='project-card-wrap'>{filterProjects().map((project) => {
                             return <Card className='project-card' key={`project--${project.id}`}>
-                                <CardHeader className='project-card-header'><CardImg className='default-card-img' variant='top' src='/images/home-improvement-icon.png' alt='home icon default' />{project.pro ? 'Pro Project' : 'DIY Project'}</CardHeader>
+                                <CardHeader className='project-card-header'><CardImg className='default-card-img' variant='top' src='/images/home-improvement-icon.png' alt='home icon default' />{project.pro ? 'Pro Project' : 'DIY Project'}
+                                </CardHeader>
                                 <CardBody>
                                     <CardTitle className='project-card-title'>{project.pro === false ? <Link className='title-link' to={`/diyProject/${project.id}`}>{project.title}</Link> : <Link className='title-link' to={`/proProject/${project.id}`}>{project.title}</Link>}</CardTitle>
                                     <CardText className='project-card-description'>{project.description}</CardText>
                                 </CardBody>
                                 <CardFooter className='project-card-footer' ><BsFillXCircleFill className='footer-delete-icon' style={{ cursor: "pointer" }} onClick={() => {
                                     Delete(project.id)
-                                }}>Delete</BsFillXCircleFill></CardFooter>
+                                }}>Delete</BsFillXCircleFill>
+                                    {project.complete === true ? <CardText className='project-card-complete'>PROJECT COMPLETE</CardText> : ''}
+                                </CardFooter>
                             </Card>
                         }
                         )

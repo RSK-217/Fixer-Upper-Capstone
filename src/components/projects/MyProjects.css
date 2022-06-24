@@ -53,7 +53,7 @@
 }
 
 .title-link {
-  color:#091D34;
+  color: #091D34;
   font-weight: 500;
   font-family: 'Cabin Sketch', cursive;
   text-decoration: underline;
@@ -75,6 +75,13 @@
 .project-card-description {
   font-size: medium;
   text-align: start;
+}
+
+.project-card-complete {
+  font-size: 15px;
+  padding-left: 15px;
+  font-weight: 600;
+  color: #FC7307;
 }
 
 .project-card-footer {

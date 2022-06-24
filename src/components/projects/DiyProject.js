@@ -61,7 +61,7 @@ const DiyProject = () => {
         <>
             <article className='body' style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
                 <header className='header'>
-                    <img className='default-project-img' src='/images/homeicon2.jpg' alt='home icon' />
+                    <img className='default-project-img' src='/images/home-improvement-icon.png' alt='home icon' />
                     <h1 className='title'>{project.title}</h1>
                 </header>
 

@@ -37,7 +37,7 @@ export const AddExpense = () => {
 
     return (
         <form className="expenseForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
-            <h2 className="addExpense_title">Add an expense</h2>
+            <h2 className="add-expense-title">Add an expense</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Expense</label>

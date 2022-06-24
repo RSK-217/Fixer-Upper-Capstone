@@ -14,207 +14,85 @@
   "projects": [
     {
       "title": "Interior painting",
-      "description": "Hallway, living room, spare room need to be painted. Need paint, primer, rollers and paint trays.",
-      "budget": 400,
+      "description": "Hallway, spare room, and half bath to be painted. Already have plastic sheeting. Need paint and rollers.",
+      "budget": 300,
       "pro": false,
       "complete": false,
-      "finalCost": 110,
       "id": 1
     },
     {
-      "title": "Repave carport",
-      "description": "When getting estimates see if filling cracks is possible.",
-      "budget": 20000,
+      "title": "Replace garage door",
+      "description": "Ask about garage door frame repair/replacement as well.",
+      "budget": 2000,
       "pro": true,
-      "complete": true,
-      "finalCost": 19471,
+      "complete": false,
       "id": 2
     },
     {
-      "title": "House painting",
-      "description": "Paint brick exterior",
-      "budget": 7000,
+      "title": "Fix drywall in carport",
+      "description": "Patch holes, retape, and add new coat on top of existing drywall.",
+      "budget": 500,
       "pro": true,
       "complete": true,
-      "finalCost": 7002,
-      "id": 5
-    },
-    {
-      "title": "Refinish floors",
-      "description": "Pull up carpet, clean and refinish",
-      "budget": 1000,
-      "pro": false,
-      "complete": true,
-      "finalCost": 470,
-      "id": 7
-    },
-    {
-      "title": "Replace bathroom faucet",
-      "description": "Replacing faucet and handles only.",
-      "budget": 300,
-      "pro": false,
-      "complete": true,
-      "finalCost": 120,
-      "id": 8
-    },
-    {
-      "title": "power wash the carport",
-      "description": "include front walkway and steps.",
-      "budget": 100,
-      "pro": false,
-      "complete": false,
-      "id": 9
+      "finalCost": 400,
+      "id": 3
     }
   ],
   "contractors": [
     {
-      "name": "Big Boys Construction",
-      "phone": "615-987-1234",
-      "email": "bigboys@bigboys.com",
-      "website": "bigboys.com",
-      "id": 2
-    },
-    {
-      "name": "Horse ",
-      "phone": "615-909-8344",
-      "email": "horse@horse.com",
-      "website": "www.horse.com",
-      "id": 6
+      "name": "Oasis Garage Doors",
+      "phone": "615-997-5751",
+      "email": "oasis@oasis.com",
+      "website": "https://oasisgaragedoors.com/",
+      "estimateId": 1,
+      "projectId": 2,
+      "id": 1
     },
     {
       "name": "Frog ",
-      "phone": "615-823-3965",
+      "phone": "615-555-3424",
       "email": "frog@frogair.com",
-      "website": "http://www.frogair.com/",
-      "id": 7
+      "website": "https://www.frogair.com/",
+      "id": 2
     },
     {
-      "name": "Big Concrete",
-      "phone": "615-777-3443",
+      "name": "Jamar Williams",
+      "phone": "615-555-9999",
       "email": "",
       "website": "",
       "estimateId": 2,
-      "projectId": 2,
-      "id": 8
-    },
-    {
-      "name": "Ham and Sons",
-      "phone": "615-990-4822",
-      "email": "",
-      "website": "www.ham.com",
-      "estimateId": 1,
-      "projectId": 2,
-      "id": 9
-    },
-    {
-      "name": "Big Shovel",
-      "phone": "615-444-3322",
-      "email": "mike@bigshovel.com",
-      "website": "www.bigshovel.com",
-      "id": 10
-    },
-    {
-      "name": "Jiminy Splits Painting",
-      "phone": "615-334-2787",
-      "email": "",
-      "website": "",
-      "estimateId": 3,
-      "projectId": 5,
-      "id": 11
+      "projectId": 3,
+      "id": 3
     }
   ],
   "estimates": [
     {
-      "estimate": 12000,
+      "estimate": 1700,
       "projectId": 2,
-      "contractor": "Ham and Sons",
-      "phone": "615-990-4822",
+      "contractor": "Oasis Garage Doors",
+      "phone": "615-997-5751",
       "id": 1
     },
     {
-      "estimate": 14000,
-      "projectId": 2,
-      "contractor": "Big Concrete",
-      "phone": "615-777-3443",
+      "estimate": 400,
+      "projectId": 3,
+      "contractor": "Jamar Williams",
+      "phone": "615-555-9999",
       "id": 2
-    },
-    {
-      "estimate": 5000,
-      "projectId": 5,
-      "contractor": "Jiminy Splits Painting",
-      "phone": "615-334-2787",
-      "id": 3
-    },
-    {
-      "estimate": 21000,
-      "projectId": 2,
-      "contractor": "Hammer Bros",
-      "phone": "615-990-8777",
-      "id": 4
-    },
-    {
-      "estimate": 17000,
-      "projectId": 2,
-      "contractor": "The building Co",
-      "phone": "615-333-2222",
-      "id": 5
-    },
-    {
-      "estimate": 15000,
-      "projectId": 2,
-      "contractor": "Driveways etc.",
-      "phone": "615-778-6654",
-      "id": 6
     }
   ],
   "expenses": [
     {
-      "type": "paint",
-      "amount": 90,
+      "type": "paint roller and trays",
+      "amount": 30,
       "projectId": 1,
       "id": 1
     },
     {
-      "type": "sander",
-      "amount": 300,
-      "projectId": 7,
-      "id": 6
-    },
-    {
-      "type": "faucet set",
-      "amount": 90,
-      "projectId": 8,
-      "id": 7
-    },
-    {
-      "type": "wrench",
-      "amount": 30,
-      "projectId": 8,
-      "id": 8
-    },
-    {
-      "type": "varnish",
-      "amount": 170,
-      "projectId": 7,
-      "id": 9
-    },
-    {
-      "type": "paint thinner",
-      "amount": 20,
+      "type": "paint w/primer",
+      "amount": 80,
       "projectId": 1,
-      "id": 10
-    },
-    {
-      "type": "cleaning solution",
-      "amount": 20,
-      "projectId": 9,
-      "id": 11
-    },
-    {
-      "type": "rollers and trays",
-      "amount": 44,
-      "projectId": 1,
-      "id": 12
+      "id": 2
     }
   ]
 }

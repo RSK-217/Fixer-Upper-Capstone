@@ -3,12 +3,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+
 }
 
-.addExpense_title,
-.editExpense_title {
+.add-expense-title,
+.edit-expense-title {
     font-size: 3em;
     padding-bottom: .5em;
+    font-family: 'Cabin Sketch', cursive;
 }
 
 .expense-form-btn,

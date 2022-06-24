@@ -93,8 +93,8 @@ export const EditProject = () => {
     }
 
     return (
-        <form className="EditForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
-            <h3 className="EditForm_title">Edit project</h3>
+        <form className="editForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
+            <h3 className="edit-form-title">Edit project</h3>
             <fieldset>
                 <div className="form-group">
                     <input

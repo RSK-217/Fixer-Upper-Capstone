@@ -3,12 +3,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 20px;
 }
 
-.addEstimate_title,
-.editEstimate_title {
+.add-estimate-title,
+.edit-estimate-title {
     font-size: 3em;
     margin-bottom: .5em;
+    font-family: 'Cabin Sketch', cursive;
 }
 
 .estimate-form-btn,

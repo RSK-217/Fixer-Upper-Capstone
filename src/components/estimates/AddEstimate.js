@@ -38,7 +38,7 @@ export const AddEstimate = () => {
 
     return (
         <form className="estimateForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
-            <h2 className="addEstimate_title">Add an estimate</h2>
+            <h2 className="add-estimate-title">Add an estimate</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Estimate</label>

@@ -43,7 +43,7 @@ export const EditExpense = () => {
 
     return (
         <form className="expenseForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
-            <h2 className="editExpense_title">Edit expense</h2>
+            <h2 className="edit-expense-title">Edit expense</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Expense</label>

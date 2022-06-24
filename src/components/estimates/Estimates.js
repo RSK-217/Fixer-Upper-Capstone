@@ -10,7 +10,6 @@ import './Estimate.css'
 
 export const Estimates = () => {
     const [estimates, setEstimates] = useState([])
-    const [checked, setChecked] = useState({ checked: false })
     const [Form, setForm] = useState([<AddEstimate />])
     const { projectId } = useParams()
 
@@ -20,11 +19,6 @@ export const Estimates = () => {
         }
         )
     }
-
-    const radioChange = (e) => {
-        setChecked({ [e.target.checked]: !false })
-    }
-
 
     const Delete = (id) => {
         fetch(`http://localhost:8088/estimates/${id}`, {
@@ -60,15 +54,15 @@ export const Estimates = () => {
                 </div>
                 <ul>
                     {estimates.map(estimate => {
-                        return <li key={`estimate--${estimate.id}`} className='icon-link'>${estimate.estimate.toLocaleString()} -&nbsp;
-                            <Link className='estimate-contractor' to={`/contractors`}>{estimate.contractor}</Link> -&nbsp;
-                            {estimate.phone}&nbsp;&nbsp;
-                            <AddToMyCon estimate={estimate} />&nbsp;&nbsp;
+                        return <li key={`estimate--${estimate.id}`} className='icon-link'>${estimate.estimate.toLocaleString()} -
+                            <Link className='estimate-contractor' to={`/contractors`}>{estimate.contractor}</Link>
+                            - {estimate.phone}
+                            <AddToMyCon estimate={estimate} />
                             <Link to={`/proProject/${estimate.id}/edit`}>
                                 <BsFillPencilFill className='estimate-edit' style={{ cursor: "pointer" }} onClick={() => {
                                     showForm()
                                 }}></BsFillPencilFill>
-                            </Link>&nbsp;&nbsp;
+                            </Link>
                             <BsFillXCircleFill className='estimate-delete' style={{ cursor: "pointer" }} onClick={() => {
                                 Delete(estimate.id)
                             }}></BsFillXCircleFill>

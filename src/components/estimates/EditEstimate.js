@@ -44,8 +44,8 @@ export const EditEstimate = () => {
     }
 
     return (
-        <form className="estimateForm">
-            <h2 className="EditEstimate_title">Edit estimate</h2>
+        <form className="estimateForm" style={{ backgroundImage: 'url(/images/shiplap.jpg)' }}>
+            <h2 className="edit-estimate-title">Edit estimate</h2>
             <fieldset>
                 <div className="form-group">
                     <label>Estimate</label>

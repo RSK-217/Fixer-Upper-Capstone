@@ -1,5 +1,5 @@
 .projectForm,
-.EditForm {
+.editForm {
     padding-top: 4em;
     display: flex;
     align-items: center;
@@ -22,9 +22,10 @@
 }
 
 
-.EditForm_title {
+.edit-form-title {
     font-size: 3em;
     margin-bottom: .5em;
+    font-family: 'Cabin Sketch', cursive;
 }
 
 .form-textarea {

@@ -20,10 +20,12 @@
 
 .estimate-contractor {
     color: #236AB9;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 .estimate-contractor:hover {
-    color: darkgreen;
+    color: #FC7307;
 }
 
 .add-estimate {
@@ -47,18 +49,18 @@
 
 .add-my-contractor {
     font-size: 13px;
-    margin: 0 0 3px 15px;
+    margin: 0 5px 3px 15px;
     color: darkgreen;
 }
 
 .estimate-edit {
     font-size: 13px;
-    margin: 0 0 3px 5px;
+    margin: 0 5px 3px 5px;
     color: #FC7307;
 }
 
 .estimate-delete {
     font-size: 13px;
-    margin: 0 0 3px 5px;
+    margin: 0 5px 3px 5px;
     color: darkred;
 }
